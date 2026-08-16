@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandre Sampaio Dutra · Desenvolvedor e responsável de TI | São Luís, MA</title>
+<meta name="description" content="Faço site, loja online, aplicativo, automação de planilha e cuido de rede e suporte. Atendo em São Luís e remoto. Peça um orçamento pelo WhatsApp.">
+<meta name="author" content="Alexandre Sampaio Dutra">
+<meta name="theme-color" content="#0C1B33">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Alexandre Sampaio Dutra">
+<!-- TROCAR os três endereços abaixo pelo seu domínio quando o site for publicado.
+     Sem isso a prévia com imagem NÃO aparece no WhatsApp, Instagram ou LinkedIn. -->
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+<meta property="og:title" content="Alexandre Sampaio Dutra · Desenvolvedor e responsável de TI">
+<meta property="og:description" content="Site, loja online, aplicativo, automação e rede. São Luís, MA, e remoto. Peça um orçamento pelo WhatsApp.">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/compartilhar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alexandre Sampaio Dutra, desenvolvedor e responsável de TI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alexandre Sampaio Dutra · Desenvolvedor e responsável de TI">
+<meta name="twitter:description" content="Site, loja online, aplicativo, automação e rede. São Luís, MA, e remoto.">
+<meta name="twitter:image" content="https://SEU-DOMINIO.com.br/assets/compartilhar.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alexandre Sampaio Dutra",
+  "jobTitle": "Desenvolvedor e responsável de TI",
+  "email": "mailto:sampaioalexandre054@gmail.com",
+  "telephone": "+5598984941488",
+  "address": { "@type": "PostalAddress", "addressLocality": "São Luís", "addressRegion": "MA", "addressCountry": "BR" },
+  "worksFor": { "@type": "Organization", "name": "Instituto Vasconcelos" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "CEST, Faculdade Santa Terezinha" },
+  "knowsAbout": ["Desenvolvimento web", "Aplicativos", "SQL", "Python", "Redes de computadores", "Suporte de TI", "Automação"]
+}
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pagina:#F4F2ED;--faixa:#0C1B33;--texto:#0C1B33;--texto2:#3A4664;--texto3:#4B5670;--texto4:#8A93A6;
+    --linha:rgba(12,27,51,.12);--linhaForte:rgba(12,27,51,.22);--borda:#DFE3EA;--cartao:#fff;
+    --azul:#12447F;--acento:#C8752A;--acento2:#E09A4E;--sobreAcento:#0C1B33;
+    --header:rgba(12,27,51,.94);--faixaTexto:#DCE9F8;--faixaTexto2:rgba(220,233,248,.74);
+    --faixaTexto3:rgba(220,233,248,.55);--faixaTexto4:rgba(220,233,248,.45);--faixaBorda2:rgba(220,233,248,.35);
+    --faixaLinha:rgba(143,182,232,.3);--faixaLinha2:rgba(143,182,232,.18);--faixaLinha3:rgba(143,182,232,.14);
+    --faixaAzul:#8FB6E8;--navLink:rgba(220,233,248,.5);
+    --veu:linear-gradient(105deg,#0C1B33 10%,rgba(12,27,51,.7) 55%,rgba(12,27,51,.25) 100%);
+    --veuFoto:linear-gradient(180deg,rgba(12,27,51,0) 60%,rgba(12,27,51,.5) 100%);
+    --grade:linear-gradient(to right,rgba(143,182,232,.17) 0 1px,transparent 1px),linear-gradient(to bottom,rgba(143,182,232,.17) 0 1px,transparent 1px);
+    --gradeTam:66px 66px,66px 66px;
+    --gradeMask:radial-gradient(125% 105% at 76% -6%,#000 0%,rgba(0,0,0,.34) 46%,transparent 80%);
+    --arcos:repeating-radial-gradient(circle at 90% 112%,transparent 0 122px,rgba(143,182,232,.24) 122px 123.5px);
+    --arcosMask:radial-gradient(95% 92% at 90% 112%,#000 0%,rgba(0,0,0,.5) 54%,transparent 86%);
+    --brilho:radial-gradient(58% 58% at 10% 4%,rgba(200,117,42,.11),transparent 72%);--logoMono:none;--logoClarear:none;--fotoFiltro:saturate(.96) contrast(1.03);
+  }
+  [data-tema="escuro"]{
+    --pagina:#0A0A0C;--faixa:#141419;--texto:#EFEFF2;--texto2:#A9A9B6;--texto3:#93939F;--texto4:#6E6E7B;
+    --linha:rgba(255,255,255,.09);--linhaForte:rgba(255,255,255,.17);--borda:#2B2B34;--cartao:#17171D;
+    --azul:#B7C4FF;--acento:#C7F04A;--acento2:#C7F04A;--sobreAcento:#0A0A0C;
+    --header:rgba(10,10,12,.92);--faixaTexto:#EFEFF2;--faixaTexto2:rgba(239,239,242,.66);
+    --faixaTexto3:rgba(239,239,242,.5);--faixaTexto4:rgba(239,239,242,.4);--faixaBorda2:rgba(239,239,242,.28);
+    --faixaLinha:rgba(255,255,255,.15);--faixaLinha2:rgba(255,255,255,.08);--faixaLinha3:rgba(255,255,255,.06);
+    --faixaAzul:#C7F04A;--navLink:rgba(239,239,242,.45);
+    --veu:linear-gradient(105deg,#0A0A0C 8%,rgba(10,10,12,.55) 58%,rgba(10,10,12,.15) 100%);
+    --veuFoto:linear-gradient(180deg,rgba(10,10,12,0) 52%,rgba(10,10,12,.72) 100%);
+    --grade:linear-gradient(to right,rgba(255,255,255,.075) 0 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.075) 0 1px,transparent 1px);
+    --gradeTam:48px 48px,48px 48px;
+    --gradeMask:radial-gradient(115% 100% at 70% -8%,#000 0%,rgba(0,0,0,.3) 48%,transparent 82%);
+    --arcos:repeating-radial-gradient(circle at 92% 108%,transparent 0 100px,rgba(199,240,74,.2) 100px 101.5px);
+    --arcosMask:radial-gradient(88% 86% at 92% 108%,#000 0%,rgba(0,0,0,.46) 54%,transparent 88%);
+    --brilho:radial-gradient(56% 50% at 84% 2%,rgba(199,240,74,.13),transparent 70%),radial-gradient(46% 46% at 4% 96%,rgba(126,146,255,.14),transparent 74%);--logoMono:invert(1) brightness(1.9);--logoClarear:brightness(1.75) saturate(1.15);--fotoFiltro:grayscale(.9) contrast(1.05) brightness(.97);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--pagina);color:var(--texto);font-family:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;font-size:16.5px;letter-spacing:-.005em;-webkit-font-smoothing:antialiased}
+  a{color:var(--azul);text-decoration:none}
+  a:hover{color:var(--acento)}
+  ::selection{background:var(--azul);color:#fff}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  :focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+  @keyframes sobe{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes revela{from{opacity:0}to{opacity:1}}
+  @keyframes desliza{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important}}
+</style>
+</helmet>
+
+<div>
+
+  <a href="#atuacao" style="position:absolute;left:-9999px;top:8px;z-index:60;padding:11px 16px;background:var(--acento);color:var(--sobreAcento);font-family:'IBM Plex Mono',monospace;font-size:12px" style-focus="left:8px">Ir para o conteúdo</a>
+
+  <header style="position:sticky;top:0;z-index:40;background:var(--header);backdrop-filter:blur(10px);border-bottom:1px solid var(--faixaLinha2)">
+    <nav ref="{{ navRef }}" style="max-width:1120px;margin:0 auto;padding:0 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">
+      <a href="#topo" style="color:#fff;font-weight:600;padding:16px 0">A.S. Dutra</a>
+
+      <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:1 1 auto;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent)">
+          <a href="#atuacao" data-sec="atuacao" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Atuação</a>
+          <a href="#habilidades" data-sec="habilidades" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Habilidades</a>
+          <a href="#cursos" data-sec="cursos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Cursos</a>
+          <a href="#projetos" data-sec="projetos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Projetos</a>
+          <a href="#servicos" data-sec="servicos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Serviços</a>
+          <a href="#contato" data-sec="contato" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Orçamento</a>
+        </div>
+      </sc-if>
+      <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1 1 auto;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent)">
+          <a href="#atuacao" data-sec="atuacao" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Work</a>
+          <a href="#habilidades" data-sec="habilidades" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Skills</a>
+          <a href="#cursos" data-sec="cursos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Courses</a>
+          <a href="#projetos" data-sec="projetos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Projects</a>
+          <a href="#servicos" data-sec="servicos" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Services</a>
+          <a href="#contato" data-sec="contato" style="flex:none;white-space:nowrap;color:var(--navLink);padding:16px 11px;border-bottom:2px solid transparent">Quote</a>
+        </div>
+      </sc-if>
+
+      <div style="display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.1em">
+        <div style="display:flex;align-items:center;gap:1px">
+          <button ref="{{ btPt }}" onClick="{{ paraPt }}" style="padding:6px 9px;background:none;border:1px solid var(--faixaLinha);color:var(--faixaTexto3);font-family:inherit;font-size:inherit;letter-spacing:inherit;cursor:pointer">PT</button>
+          <button ref="{{ btEn }}" onClick="{{ paraEn }}" style="padding:6px 9px;background:none;border:1px solid var(--faixaLinha);color:var(--faixaTexto3);font-family:inherit;font-size:inherit;letter-spacing:inherit;cursor:pointer">EN</button>
+        </div>
+        <button onClick="{{ trocaTema }}" title="{{ rotuloTema }}" style="display:flex;align-items:center;gap:7px;padding:6px 10px;background:none;border:1px solid var(--faixaLinha);color:var(--faixaTexto3);font-family:inherit;font-size:inherit;letter-spacing:inherit;text-transform:uppercase;cursor:pointer" style-hover="color:var(--faixaTexto);border-color:var(--faixaBorda2)">
+          <span ref="{{ marcaTema }}" style="width:9px;height:9px;border-radius:50%;background:var(--faixaAzul);flex:none"></span>{{ rotuloTema }}
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="topo" style="position:relative;background:var(--faixa);color:var(--faixaTexto);overflow:hidden">
+
+
+
+
+
+
+
+
+    <div style="position:absolute;inset:0;background-image:var(--grade);background-size:var(--gradeTam);-webkit-mask-image:var(--gradeMask);mask-image:var(--gradeMask)"></div>
+    <div style="position:absolute;inset:0;background-image:var(--arcos);-webkit-mask-image:var(--arcosMask);mask-image:var(--arcosMask)"></div>
+    <div style="position:absolute;inset:0;background-image:var(--brilho)"></div>
+
+    <div style="position:absolute;inset:0;background:var(--veu)"></div>
+
+
+    <div style="position:relative;max-width:1120px;margin:0 auto;padding:76px 26px 84px;display:flex;flex-wrap:wrap;gap:56px;align-items:center">
+
+      <div style="flex:1.25 1 430px;min-width:0;animation:sobe .7s cubic-bezier(.2,.8,.2,1) both">
+        <h1 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.2vw,80px);line-height:.94;letter-spacing:-.035em;color:#fff;text-wrap:balance">Alexandre<br>Sampaio Dutra</h1>
+
+        <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <p style="margin:24px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:clamp(19px,2vw,23px);line-height:1.4;color:var(--faixaTexto);max-width:46ch">Desenvolvedor e responsável de TI em uma clínica odontológica de São Luís. Cursando Sistemas de Informação.</p>
+            <p style="margin:20px 0 0;font-size:17px;line-height:1.68;color:var(--faixaTexto2);max-width:54ch">Tenho 20 anos. Comecei mexendo no computador de casa, depois passei a montar e formatar máquinas para vizinhos e conhecidos. Em abril de 2026 entrei no Instituto Vasconcelos para cuidar da parte de tecnologia.</p>
+            <p style="margin:14px 0 0;font-size:17px;line-height:1.68;color:var(--faixaTexto2);max-width:54ch">Cuido da rede, do suporte, do banco de dados e do desenvolvimento de uma clínica que não pode parar. É o que me deu prática em resolver problema de gente real, com prazo real. Atendo quem precisa de site, loja online, aplicativo ou sistema, do primeiro desenho até o dia em que a equipe começa a usar.</p>
+            <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto3)">
+              <span>São Luís, Maranhão</span>
+              <span><strong style="color:#fff;font-weight:600">Instituto Vasconcelos</strong>, desde abr/2026</span>
+              <span><strong style="color:#fff;font-weight:600">CEST</strong>, cursando</span>
+            </div>
+            <div style="margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em">
+              <a href="#contato" style="padding:13px 22px;background:var(--acento2);color:var(--sobreAcento);font-weight:600" style-hover="background:var(--cartao)">Pedir um orçamento</a>
+              <a href="#servicos" style="padding:13px 22px;border:1px solid var(--faixaBorda2);color:var(--faixaTexto)" style-hover="border-color:#fff;color:#fff">Ver serviços</a>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <p style="margin:24px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:clamp(19px,2vw,23px);line-height:1.4;color:var(--faixaTexto);max-width:46ch">Developer and IT lead at a dental clinic in São Luís, Brazil. Studying Information Systems.</p>
+            <p style="margin:20px 0 0;font-size:17px;line-height:1.68;color:var(--faixaTexto2);max-width:54ch">I am 20. I started with the family computer, then built and reinstalled machines for neighbours and friends. In April 2026 I joined Instituto Vasconcelos to look after everything technical.</p>
+            <p style="margin:14px 0 0;font-size:17px;line-height:1.68;color:var(--faixaTexto2);max-width:54ch">I run the network, the support, the databases and the development for a clinic that cannot afford downtime. That is what taught me to solve real people's problems against real deadlines. I take on websites, online shops, apps and internal systems, from the first sketch to the day the team starts using it.</p>
+            <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto3)">
+              <span>São Luís, Brazil</span>
+              <span><strong style="color:#fff;font-weight:600">Instituto Vasconcelos</strong>, since apr 2026</span>
+              <span><strong style="color:#fff;font-weight:600">CEST</strong>, in progress</span>
+            </div>
+            <div style="margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em">
+              <a href="#contato" style="padding:13px 22px;background:var(--acento2);color:var(--sobreAcento);font-weight:600" style-hover="background:var(--cartao)">Ask for a quote</a>
+              <a href="#servicos" style="padding:13px 22px;border:1px solid var(--faixaBorda2);color:var(--faixaTexto)" style-hover="border-color:#fff;color:#fff">See services</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="flex:.8 1 300px;min-width:0;max-width:370px;animation:revela .9s ease .2s both">
+        <div style="position:relative;aspect-ratio:4/5;border:1px solid var(--faixaLinha)">
+          <div ref="{{ fotoRef }}" style="position:absolute;inset:0;background-image:url('assets/alexandre.jpeg');background-size:cover;background-position:50% 22%;filter:saturate(.92) contrast(1.02)"></div>
+          <div style="position:absolute;inset:0;background:var(--veuFoto)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="atuacao" style="max-width:1120px;margin:0 auto;padding:84px 26px 0">
+    <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <h2 style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">Atuação</h2>
+
+        <article style="display:flex;flex-wrap:wrap;gap:26px 32px;padding:34px 0;border-bottom:1px solid var(--linha)">
+          <p style="flex:0 1 180px;margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--azul)">desde abr/2026</p>
+          <div style="flex:3 1 420px;min-width:0">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(23px,2.5vw,28px);letter-spacing:-.025em">Desenvolvedor e responsável de TI, Instituto Vasconcelos</h3>
+            <p style="margin:14px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">Cuido da rede e dos computadores da clínica: cabeamento, roteador, Wi‑Fi da equipe separado do dos pacientes, impressão compartilhada e manutenção das máquinas da recepção e dos consultórios.</p>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">Também escrevo as ferramentas internas. Fiz em Python a conferência automática entre a agenda do dia e os lançamentos do caixa, e uma tela simples que a recepção usa para consultar retorno de paciente sem abrir o sistema inteiro.</p>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">Do lado da rotina: backup do prontuário, contas e permissões de acesso, e a documentação da rede.</p>
+            <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Python</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="14" height="14" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Git</span>
+            </div>
+          </div>
+        </article>
+
+        <article style="display:flex;flex-wrap:wrap;gap:16px 32px;padding:30px 0">
+          <p style="flex:0 1 180px;margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--azul)">cursando</p>
+          <div style="flex:3 1 420px;min-width:0">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;letter-spacing:-.02em">Sistemas de Informação, CEST</h3>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">Bacharelado em São Luís. Até agora vi algoritmos, estruturas de dados, banco de dados, redes e engenharia de software.</p>
+          </div>
+        </article>
+      </div>
+    </sc-if>
+    <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <h2 style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">Work</h2>
+
+        <article style="display:flex;flex-wrap:wrap;gap:26px 32px;padding:34px 0;border-bottom:1px solid var(--linha)">
+          <p style="flex:0 1 180px;margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--azul)">apr 2026 to now</p>
+          <div style="flex:3 1 420px;min-width:0">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(23px,2.5vw,28px);letter-spacing:-.025em">Developer and IT lead, Instituto Vasconcelos</h3>
+            <p style="margin:14px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">I look after the clinic's network and computers: cabling, router, a staff Wi‑Fi kept separate from the patient one, shared printing, and the machines at reception and in the treatment rooms.</p>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">I also write the internal tools. In Python I automated the daily check between the appointment book and the till entries, and built a simple screen reception uses to look up returning patients without opening the whole system.</p>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">On the routine side: patient‑record backups, user accounts and access permissions, and the network documentation.</p>
+            <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Python</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="14" height="14" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--azul)" style-hover="border-color:var(--acento)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Git</span>
+            </div>
+          </div>
+        </article>
+
+        <article style="display:flex;flex-wrap:wrap;gap:16px 32px;padding:30px 0">
+          <p style="flex:0 1 180px;margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--azul)">in progress</p>
+          <div style="flex:3 1 420px;min-width:0">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:21px;letter-spacing:-.02em">Information Systems, CEST</h3>
+            <p style="margin:12px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2);max-width:64ch">Bachelor's degree in São Luís. So far: algorithms, data structures, databases, networks and software engineering.</p>
+          </div>
+        </article>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="habilidades" style="padding:78px 0 0">
+    <div style="max-width:1120px;margin:0 auto;padding:0 26px">
+      <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Habilidades</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Sites, aplicativos, banco de dados e a rede que sustenta tudo isso.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Skills</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Websites, apps, databases and the network that keeps them running.</p>
+        </div>
+      </sc-if>
+    </div>
+
+    <div aria-hidden="true" style="margin-top:40px;display:flex;flex-direction:column;gap:12px">
+      <div style="position:relative;height:44px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)">
+        <div style="position:absolute;top:0;left:0;display:flex;gap:12px;width:max-content;animation:desliza 44s linear infinite" style-hover="animation-play-state:paused">
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">HTML5</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">CSS3</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">JavaScript</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">TypeScript</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">React</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Next.js</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Tailwind CSS</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Vite</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Bootstrap</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">HTML5</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">CSS3</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">JavaScript</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">TypeScript</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">React</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Next.js</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Tailwind CSS</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Vite</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Bootstrap</span>
+        </div>
+      </div>
+      <div style="position:relative;height:44px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)">
+        <div style="position:absolute;top:0;left:0;display:flex;gap:12px;width:max-content;animation:desliza 52s linear infinite reverse" style-hover="animation-play-state:paused">
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Node.js</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Express</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Python</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">PHP</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">PostgreSQL</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">MongoDB</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Firebase</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Supabase</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Node.js</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Express</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Python</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">PHP</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">PostgreSQL</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">MongoDB</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Firebase</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Supabase</span>
+        </div>
+      </div>
+      <div style="position:relative;height:44px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)">
+        <div style="position:absolute;top:0;left:0;display:flex;gap:12px;width:max-content;animation:desliza 60s linear infinite" style-hover="animation-play-state:paused">
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">React Native</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Flutter</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Git</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">GitHub</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">VS Code</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Docker</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Vercel</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Figma</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Postman</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Linux</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Pandas</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/xampp/FB7A24" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">XAMPP</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">React Native</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Flutter</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Git</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">GitHub</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">VS Code</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Docker</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:var(--logoMono)">Vercel</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Figma</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Postman</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Linux</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">Pandas</span>
+            <span style="display:inline-flex;align-items:center;gap:10px;flex:none;padding:11px 17px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.simpleicons.org/xampp/FB7A24" alt="" width="20" height="20" loading="lazy" style="display:block;flex:none;filter:none">XAMPP</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1120px;margin:0 auto;padding:0 26px">
+      <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(218px,1fr));gap:30px 34px">
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Frontend</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Layout responsivo, acessibilidade, animação leve, SEO técnico</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Backend e API</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">API REST, autenticação JWT, painel administrativo, integração de pagamento, webhook</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Banco de dados</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">SQL, modelagem ER, consulta e otimização, backup e restauração</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Mobile</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">PWA, app e site na mesma conta, publicação na loja</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Dados e BI</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Power BI, DAX, Excel avançado, PROCV e tabela dinâmica, relatório automático</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Automação</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Web scraping, integração de planilha, rotina agendada, conferência de caixa</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">IA aplicada</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Fundamentos, machine learning, engenharia de prompt, API de modelo</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Infra e redes</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">TCP/IP, sub‑redes, roteamento, Wi‑Fi corporativo, cabeamento, Windows e Linux, suporte ao usuário</p>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(218px,1fr));gap:30px 34px">
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Frontend</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Responsive layout, accessibility, light animation, technical SEO</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Backend &amp; API</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">REST API, JWT authentication, admin panels, payment integration, webhooks</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Databases</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">SQL, ER modelling, querying and tuning, backup and restore</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Mobile</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">PWA, one account across app and web, store publishing</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Data &amp; BI</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Power BI, DAX, advanced Excel, lookups and pivot tables, automated reporting</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Automation</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Web scraping, spreadsheet integration, scheduled jobs, till reconciliation</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Applied AI</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">Fundamentals, machine learning, prompt engineering, model APIs</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acento)">Infra &amp; networks</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.62;color:var(--texto3)">TCP/IP, subnetting, routing, business Wi‑Fi, cabling, Windows and Linux, user support</p>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section id="cursos" style="max-width:1120px;margin:0 auto;padding:82px 26px 0">
+    <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Formação</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Faculdade em andamento e 210 horas de curso técnico.</p>
+          <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:var(--texto3)">Toque em qualquer linha para ver o que o curso cobriu.</p>
+        </div>
+
+        <div style="margin-top:34px">
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirRedes }}" aria-expanded="{{ redes }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Redes de Computadores</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">50h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ redes }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">TCP/IP, sub‑redes, roteamento, Ethernet, cabeamento e wireless. É a base do que eu faço na clínica todos os dias.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirPython }}" aria-expanded="{{ python }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Programação em Python</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">50h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ python }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Algoritmos, condicionais, laços, vetores e matrizes, encapsulamento. Foi com isso que escrevi a conferência de agenda e caixa.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirBi }}" aria-expanded="{{ bi }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Análises Avançadas por Área no Power BI</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">40h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ bi }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">DAX, modelagem de dados e dashboard do zero, com casos de people analytics e logística.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirSql }}" aria-expanded="{{ sql }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">SQL</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">35h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ sql }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Banco, tabela, consulta, relacionamento, HeidiSQL e ambiente XAMPP.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirInfo }}" aria-expanded="{{ info }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Informática Avançada</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">20h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ info }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Windows 11, Office 365, Excel avançado, Word e PowerPoint.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirIa }}" aria-expanded="{{ ia }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Fundamentos de IA e Machine Learning</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">15h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ ia }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Como o modelo aprende e onde a IA realmente encurta trabalho, e não onde ela só enfeita.</p>
+          </sc-if>
+        </div>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Education</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">A degree in progress and 210 hours of technical courses.</p>
+          <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:var(--texto3)">Tap any line to see what the course covered.</p>
+        </div>
+
+        <div style="margin-top:34px">
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirRedes }}" aria-expanded="{{ redes }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Computer Networks</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">50h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ redes }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">TCP/IP, subnetting, routing, Ethernet, cabling and wireless. This is the base of what I do at the clinic every day.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirPython }}" aria-expanded="{{ python }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Python Programming</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">50h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ python }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Algorithms, conditionals, loops, arrays and matrices, encapsulation. This is what I wrote the appointment-and-till check with.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirBi }}" aria-expanded="{{ bi }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Advanced Analysis by Area in Power BI</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">40h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ bi }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">DAX, data modelling and dashboards from scratch, with people-analytics and logistics cases.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirSql }}" aria-expanded="{{ sql }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">SQL</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">35h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ sql }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Databases, tables, queries, relationships, HeidiSQL and the XAMPP environment.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirInfo }}" aria-expanded="{{ info }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">Advanced Computing</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">20h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ info }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">Windows 11, Office 365, advanced Excel, Word and PowerPoint.</p>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+          <button type="button" onClick="{{ abrirIa }}" aria-expanded="{{ ia }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:19px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="color:var(--acento)">
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em">AI and Machine Learning Fundamentals</span>
+            <span style="display:flex;align-items:baseline;gap:18px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--texto4)">15h<span style="color:var(--acento);font-size:14px">+</span></span>
+          </button>
+          <sc-if value="{{ ia }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:-2px 0 22px;max-width:66ch;font-size:16px;line-height:1.65;color:var(--texto2)">How a model learns and where AI actually saves work, not where it is just decoration.</p>
+          </sc-if>
+        </div>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <sc-if value="{{ verProjetos }}" hint-placeholder-val="{{ true }}">
+    <section id="projetos" style="max-width:1120px;margin:0 auto;padding:82px 26px 0">
+      <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+      <div>
+      <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Projetos</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Duas coisas que estão rodando de verdade.</p>
+        </div>
+
+        <article style="padding:46px 0;border-top:1px solid var(--linha)">
+          <div style="display:flex;align-items:baseline;gap:16px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;color:var(--texto4);letter-spacing:-.02em">01</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">Loja online</span>
+          </div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:30px">
+            <div style="max-width:72ch">
+              <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(27px,3.2vw,36px);line-height:1.1;letter-spacing:-.03em">Disimonni</h3>
+              <p style="margin:16px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2)">Loja de moda infantil da minha tia. Fiz o site inteiro: busca, navegação por categoria e por idade, carrinho, pedido pelo WhatsApp e frete pelos Correios. E o painel de administração, onde ela cadastra peça, troca foto e preço e acompanha pedido sem depender de mim.</p>
+              <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="14" height="14" style="display:block;flex:none">HTML5</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="14" height="14" style="display:block;flex:none">CSS3</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="14" height="14" style="display:block;flex:none">PHP</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="14" height="14" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span></div>
+            </div>
+            <a href="https://www.disimonni.com.br" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 26px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda);color:var(--texto)" style-hover="border-color:var(--acento);color:var(--texto)">
+              <span style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">Loja no ar</span>
+                <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(19px,2.4vw,25px);letter-spacing:-.02em;overflow-wrap:anywhere">disimonni.com.br</span>
+              </span>
+              <span style="flex:none;padding:12px 20px;border:1px solid var(--linhaForte);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em">Abrir a loja ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article style="padding:46px 0;border-top:1px solid var(--linha)">
+          <div style="display:flex;align-items:baseline;gap:16px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;color:var(--texto4);letter-spacing:-.02em">02</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">App e site · em desenvolvimento</span>
+          </div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:30px">
+            <div style="max-width:72ch">
+              <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(27px,3.2vw,36px);line-height:1.1;letter-spacing:-.03em">MeuFinanceiro</h3>
+              <p style="margin:16px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2)">Controle financeiro no celular e no navegador, com a mesma conta nos dois. Lançamento de entrada e saída, categoria de gasto e a visão do mês fechada. Está na reta final.</p>
+              <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="14" height="14" style="display:block;flex:none">React</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Node.js</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="14" height="14" style="display:block;flex:none">Firebase</span></div>
+            </div>
+            <a href="https://meufinanceiro-dusky.vercel.app" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;gap:22px 26px;padding:20px;background:var(--cartao);border:1px solid var(--borda);color:var(--texto)" style-hover="border-color:var(--acento);color:var(--texto)">
+              <img src="assets/meufinanceiro-previa.jpg" width="762" height="508" alt="Prévia do painel inicial do MeuFinanceiro." loading="lazy" style="flex:none;display:block;width:300px;max-width:100%;height:auto;border:1px solid var(--linha)">
+              <span style="flex:1 1 220px;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 22px">
+                <span style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">App e site</span>
+                  <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,23px);letter-spacing:-.02em">MeuFinanceiro</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.45;color:var(--texto3)">Valores e usuário ocultos na prévia</span>
+                </span>
+                <span style="flex:none;padding:12px 20px;border:1px solid var(--linhaForte);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em">Abrir o app ↗</span>
+              </span>
+            </a>
+          </div>
+        </article>
+      </div>
+      </sc-if>
+      <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+      <div>
+      <div style="max-width:640px">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Projects</h2>
+          <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Two things that are actually running.</p>
+        </div>
+
+        <article style="padding:46px 0;border-top:1px solid var(--linha)">
+          <div style="display:flex;align-items:baseline;gap:16px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;color:var(--texto4);letter-spacing:-.02em">01</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">Online shop</span>
+          </div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:30px">
+            <div style="max-width:72ch">
+              <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(27px,3.2vw,36px);line-height:1.1;letter-spacing:-.03em">Disimonni</h3>
+              <p style="margin:16px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2)">My aunt's children's clothing shop. I built the whole site: search, browsing by category and by age, cart, WhatsApp ordering and post office shipping. Plus the admin panel, where she adds items, changes photos and prices and follows orders without needing me.</p>
+              <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="14" height="14" style="display:block;flex:none">HTML5</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="14" height="14" style="display:block;flex:none">CSS3</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="14" height="14" style="display:block;flex:none">PHP</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="14" height="14" style="display:block;flex:none;filter:var(--logoClarear)">MySQL</span></div>
+            </div>
+            <a href="https://www.disimonni.com.br" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 26px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda);color:var(--texto)" style-hover="border-color:var(--acento);color:var(--texto)">
+              <span style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">Live shop</span>
+                <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(19px,2.4vw,25px);letter-spacing:-.02em;overflow-wrap:anywhere">disimonni.com.br</span>
+              </span>
+              <span style="flex:none;padding:12px 20px;border:1px solid var(--linhaForte);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em">Open the shop ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article style="padding:46px 0;border-top:1px solid var(--linha)">
+          <div style="display:flex;align-items:baseline;gap:16px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;color:var(--texto4);letter-spacing:-.02em">02</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">App and web · in development</span>
+          </div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:30px">
+            <div style="max-width:72ch">
+              <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(27px,3.2vw,36px);line-height:1.1;letter-spacing:-.03em">MeuFinanceiro</h3>
+              <p style="margin:16px 0 0;font-size:16.5px;line-height:1.65;color:var(--texto2)">Personal finance on the phone and in the browser, same account on both. Income and expense entries, spending categories and a closed monthly view. In its final stretch.</p>
+              <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="14" height="14" style="display:block;flex:none">JavaScript</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="14" height="14" style="display:block;flex:none">React</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="14" height="14" style="display:block;flex:none">Node.js</span><span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:var(--cartao);border:1px solid var(--borda);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--texto2)" style-hover="border-color:var(--acento);color:var(--texto)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="14" height="14" style="display:block;flex:none">Firebase</span></div>
+            </div>
+            <a href="https://meufinanceiro-dusky.vercel.app" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;gap:22px 26px;padding:20px;background:var(--cartao);border:1px solid var(--borda);color:var(--texto)" style-hover="border-color:var(--acento);color:var(--texto)">
+              <img src="assets/meufinanceiro-previa.jpg" width="762" height="508" alt="Preview of the MeuFinanceiro home dashboard." loading="lazy" style="flex:none;display:block;width:300px;max-width:100%;height:auto;border:1px solid var(--linha)">
+              <span style="flex:1 1 220px;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 22px">
+                <span style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acento)">App and web</span>
+                  <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,23px);letter-spacing:-.02em">MeuFinanceiro</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.45;color:var(--texto3)">Amounts and username hidden in the preview</span>
+                </span>
+                <span style="flex:none;padding:12px 20px;border:1px solid var(--linhaForte);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em">Open the app ↗</span>
+              </span>
+            </a>
+          </div>
+        </article>
+      </div>
+      </sc-if>
+    </section>
+  </sc-if>
+
+  <section id="servicos" style="max-width:1120px;margin:0 auto;padding:80px 26px 0">
+    <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Serviços</h2>
+        </div>
+
+        <p style="margin:26px 0 0;max-width:30ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">Você não precisa de tecnologia. Precisa que um problema pare de acontecer.</p>
+
+        <div style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Site e loja online</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Catálogo com preço, carrinho e pedido fechado pelo WhatsApp já com o frete calculado. Você troca foto, preço e produto sozinho, no painel.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Pedido pelo WhatsApp</li>
+              <li>Cálculo de frete</li>
+              <li>Painel de administração</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Aplicativo</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">App de celular com versão web na mesma conta. Para a sua equipe usar em campo ou para o seu cliente resolver sem ligar.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Android e iOS</li>
+              <li>Publicação na loja</li>
+              <li>Notificação</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Sistema interno</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Um lugar só, com login por pessoa e a tela que a equipe abre todo dia. Feito em cima de como você já trabalha, não do contrário.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Login por perfil</li>
+              <li>Relatório na tela</li>
+              <li>Feito sob medida</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Automação de rotina</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">O que é repetição vira rotina automática. Na clínica, a conferência entre agenda e caixa deixou de ser trabalho de ninguém.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Relatório automático</li>
+              <li>Conferência entre sistemas</li>
+              <li>Rotina agendada</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Banco de dados</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Seu dado sai da planilha e vai para um banco, com consulta rápida, histórico e backup rodando sozinho.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Modelagem</li>
+              <li>Consulta e limpeza</li>
+              <li>Backup automático</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Painel de indicadores</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">O número que você olha toda semana num painel que se atualiza sozinho, sem esperar alguém montar relatório.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Power BI</li>
+              <li>Indicador e meta</li>
+              <li>Atualização automática</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">IA aplicada ao negócio</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">IA no que ela resolve de fato: primeiro atendimento, leitura de documento e triagem do que chega. Onde não resolve, eu falo.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Atendimento com IA</li>
+              <li>Resumo de documento</li>
+              <li>Integração por API</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">TI, rede e suporte</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Rede e Wi‑Fi que aguentam o movimento, backup rodando sozinho e computador em dia. Presencial em São Luís.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Rede e Wi‑Fi</li>
+              <li>Backup e segurança</li>
+              <li>Suporte à equipe</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 style="margin:52px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">Como funciona</h3>
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px 30px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">01</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Conversa</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">Você me conta o que trava hoje. Eu digo se dá para resolver, e se eu sou a pessoa certa para isso.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">02</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Proposta</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">Escopo escrito e preço fechado antes de começar. Sem valor por hora e sem surpresa no meio.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">03</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Primeira versão</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">Você vê funcionando cedo, com o seu dado real, e ainda dá tempo de mudar de ideia.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">04</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Entrega</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">No ar, com a equipe treinada e tudo no seu nome. Suporte combinado depois, se você quiser.</p>
+          </div>
+        </div>
+
+        <h3 style="margin:52px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">Combinado desde o começo</h3>
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:24px 30px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">O preço é fechado, não por hora</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">Você recebe valor e escopo por escrito antes de eu começar. Se aparecer algo novo no caminho, eu te mostro o custo e você decide se entra.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">A conversa não custa nada</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">Eu escuto o seu caso e digo o que eu faria. Se resolver com uma planilha bem montada, você ouve isso de mim.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">O painel é seu</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">Foto, preço e texto você troca na hora, sem depender de mim e sem pagar por isso.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)">
+          <p style="margin:0;flex:1 1 320px;font-size:16.5px;line-height:1.55;color:var(--texto2)">Me conta o que está travando hoje. Eu respondo dizendo se resolve, como resolve e quanto custa.</p>
+          <a href="#contato" style="flex:none;padding:13px 22px;background:var(--acento);color:var(--sobreAcento);font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.06em" style-hover="background:var(--texto);color:var(--pagina)">Pedir um orçamento</a>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">
+          <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento)">Services</h2>
+        </div>
+
+        <p style="margin:26px 0 0;max-width:30ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.14;letter-spacing:-.028em">You do not need technology. You need a problem to stop happening.</p>
+
+        <div style="margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Website and online shop</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">A catalogue with prices, a cart and a complete order sent over WhatsApp with shipping already calculated. You change photos, prices and products yourself.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>WhatsApp ordering</li>
+              <li>Shipping calculation</li>
+              <li>Admin panel</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Mobile app</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">A phone app with a web version on the same account. For your team in the field or for customers who would rather not call.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Android and iOS</li>
+              <li>Store publishing</li>
+              <li>Notifications</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Internal system</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">One place, with a login per person and the screen your team opens every day. Built around how you already work.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Role-based login</li>
+              <li>On-screen reporting</li>
+              <li>Built to fit</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Routine automation</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Whatever repeats becomes an automatic routine. At the clinic, checking the appointment book against the till stopped being anyone’s job.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Automated reports</li>
+              <li>Checks between systems</li>
+              <li>Scheduled jobs</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Databases</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">Your data leaves the spreadsheet for a real database, with fast queries, history and backups that run on their own.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Modelling</li>
+              <li>Queries and cleanup</li>
+              <li>Automatic backups</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Dashboards</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">The number you check every week in a dashboard that refreshes itself, without waiting for someone to build a report.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Power BI</li>
+              <li>Metrics and targets</li>
+              <li>Automatic refresh</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">Applied AI</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">AI where it genuinely helps: first-line replies, reading documents, triaging what comes in. Where it does not help, I say so.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>AI-assisted replies</li>
+              <li>Document summaries</li>
+              <li>API integration</li>
+            </ul>
+          </article>
+
+          <article style="display:flex;flex-direction:column;gap:12px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)" style-hover="border-color:var(--acento)">
+            <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">IT, network and support</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--texto2)">A network and Wi‑Fi that hold up under real use, backups running on their own and machines kept in order. On site in São Luís.</p>
+            <ul style="margin:auto 0 0;padding:14px 0 0;list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--linha);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.45;color:var(--texto3)">
+              <li>Network and Wi‑Fi</li>
+              <li>Backup and security</li>
+              <li>Team support</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 style="margin:52px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">How it works</h3>
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px 30px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">01</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Conversation</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">You tell me what gets stuck today. I tell you whether it can be solved, and whether I am the right person for it.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">02</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Proposal</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">Written scope and a fixed price before anything starts. No hourly billing, no surprises halfway through.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">03</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">First version</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">You see it working early, with your real data, while there is still time to change your mind.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acento)">04</span>
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.015em">Handover</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--texto3)">Live, with the team trained and everything in your name. Ongoing support afterwards if you want it.</p>
+          </div>
+        </div>
+
+        <h3 style="margin:52px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);padding-bottom:14px;border-bottom:1px solid var(--linhaForte)">Agreed from the start</h3>
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:24px 30px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">A fixed price, never by the hour</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">You get scope and price in writing before I start. If something new comes up, I show you the cost and you decide whether it goes in.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">Talking costs nothing</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">I listen to your case and tell you what I would do. If a well-built spreadsheet solves it, you will hear that from me.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <h4 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em">The panel is yours</h4>
+            <p style="margin:0;font-size:14.5px;line-height:1.5;color:var(--texto3)">Photos, prices and text you change yourself, right away, without me and without paying for it.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;padding:26px 24px;background:var(--cartao);border:1px solid var(--borda)">
+          <p style="margin:0;flex:1 1 320px;font-size:16.5px;line-height:1.55;color:var(--texto2)">Tell me what is getting stuck today. I will reply with whether it can be solved, how, and what it costs.</p>
+          <a href="#contato" style="flex:none;padding:13px 22px;background:var(--acento);color:var(--sobreAcento);font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.06em" style-hover="background:var(--texto);color:var(--pagina)">Ask for a quote</a>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="contato" style="margin-top:80px;background:var(--faixa);color:var(--faixaTexto);position:relative;overflow:hidden">
+
+
+
+
+
+
+
+
+
+    <div style="position:absolute;inset:0;background-image:var(--grade);background-size:var(--gradeTam);-webkit-mask-image:var(--gradeMask);mask-image:var(--gradeMask)"></div>
+    <div style="position:absolute;inset:0;background-image:var(--arcos);-webkit-mask-image:var(--arcosMask);mask-image:var(--arcosMask)"></div>
+    <div style="position:absolute;inset:0;background-image:var(--brilho)"></div>
+
+    <div style="position:relative;max-width:1120px;margin:0 auto;padding:76px 26px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+
+        <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+          <div style="flex:1 1 320px;min-width:0">
+            <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento2)">Orçamento</h2>
+            <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.2vw,40px);line-height:1.08;letter-spacing:-.03em;color:#fff;max-width:22ch">Me conte o que precisa e eu volto com prazo e preço.</p>
+
+            <div style="margin-top:32px;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">01</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">Você responde as quatro perguntas ao lado.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">02</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">Eu retorno com prazo, valor e o que está incluído.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">03</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">Se fizer sentido para você, a gente começa.</span>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1 1 320px;min-width:0">
+            <h2 style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acento2)">Get a quote</h2>
+            <p style="margin:16px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(26px,3.2vw,40px);line-height:1.08;letter-spacing:-.03em;color:#fff;max-width:22ch">Tell me what you need and I come back with time and price.</p>
+
+            <div style="margin-top:32px;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">01</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">You answer the four questions on the right.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">02</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">I reply with a timeline, a price and what is included.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:baseline">
+                <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">03</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">If it makes sense for you, we start.</span>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="flex:1.1 1 340px;min-width:0">
+          <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ envia }}" style="display:flex;flex-direction:column;gap:14px;font-family:'IBM Plex Mono',monospace">
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Seu nome</span>
+                <input ref="{{ refNome }}" type="text" autoComplete="name" required="{{ true }}" placeholder="Como devo te chamar" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">O que você precisa</span>
+                <select ref="{{ refServico }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                  <option style="color:#111">Site da empresa</option>
+                  <option style="color:#111">Loja online</option>
+                  <option style="color:#111">Aplicativo</option>
+                  <option style="color:#111">Automação ou planilha</option>
+                  <option style="color:#111">TI, rede e suporte</option>
+                  <option style="color:#111">Ainda não sei bem</option>
+                </select>
+              </label>
+              <div style="display:flex;flex-wrap:wrap;gap:14px">
+                <label style="flex:1 1 140px;display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Para quando</span>
+                  <select ref="{{ refPrazo }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                    <option style="color:#111">O quanto antes</option>
+                    <option style="color:#111">Neste mês</option>
+                    <option style="color:#111">Nos próximos meses</option>
+                    <option style="color:#111">Só pesquisando</option>
+                  </select>
+                </label>
+                <label style="flex:1 1 140px;display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Faixa de investimento</span>
+                  <select ref="{{ refOrcamento }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                    <option style="color:#111">Até R$ 1.500</option>
+                    <option style="color:#111">R$ 1.500 a R$ 3.000</option>
+                    <option style="color:#111">R$ 3.000 a R$ 7.000</option>
+                    <option style="color:#111">Acima de R$ 7.000</option>
+                    <option style="color:#111">Preciso de uma orientação</option>
+                  </select>
+                </label>
+              </div>
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Conte em uma frase</span>
+                <textarea ref="{{ refDetalhe }}" rows="3" placeholder="Ex.: tenho uma loja de roupa e quero vender pelo site" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px;line-height:1.5;resize:vertical"></textarea>
+              </label>
+              <button type="submit" style="margin-top:4px;padding:15px 20px;background:var(--acento2);border:0;color:var(--sobreAcento);font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer" style-hover="background:#fff">Enviar no WhatsApp</button>
+              <p style="margin:0;font-size:11px;line-height:1.6;letter-spacing:.04em;color:var(--faixaTexto3)">Abre a conversa já preenchida. Prefere e‑mail? <a href="mailto:sampaioalexandre054@gmail.com" style="color:var(--faixaTexto);border-bottom:1px solid var(--acento2)">sampaioalexandre054@gmail.com</a></p>
+            </form>
+          </sc-if>
+          <sc-if value="{{ en }}" hint-placeholder-val="{{ false }}">
+            <form onSubmit="{{ envia }}" style="display:flex;flex-direction:column;gap:14px;font-family:'IBM Plex Mono',monospace">
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Your name</span>
+                <input ref="{{ refNome }}" type="text" autoComplete="name" required="{{ true }}" placeholder="What should I call you" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">What you need</span>
+                <select ref="{{ refServico }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                  <option style="color:#111">Company website</option>
+                  <option style="color:#111">Online shop</option>
+                  <option style="color:#111">Mobile app</option>
+                  <option style="color:#111">Automation or spreadsheets</option>
+                  <option style="color:#111">IT, network and support</option>
+                  <option style="color:#111">Not sure yet</option>
+                </select>
+              </label>
+              <div style="display:flex;flex-wrap:wrap;gap:14px">
+                <label style="flex:1 1 140px;display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Timing</span>
+                  <select ref="{{ refPrazo }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                    <option style="color:#111">As soon as possible</option>
+                    <option style="color:#111">This month</option>
+                    <option style="color:#111">In the next few months</option>
+                    <option style="color:#111">Just looking</option>
+                  </select>
+                </label>
+                <label style="flex:1 1 140px;display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">Budget range</span>
+                  <select ref="{{ refOrcamento }}" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px">
+                    <option style="color:#111">Up to R$ 1,500</option>
+                    <option style="color:#111">R$ 1,500 to 3,000</option>
+                    <option style="color:#111">R$ 3,000 to 7,000</option>
+                    <option style="color:#111">Above R$ 7,000</option>
+                    <option style="color:#111">I need guidance on this</option>
+                  </select>
+                </label>
+              </div>
+              <label style="display:flex;flex-direction:column;gap:7px">
+                <span style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faixaTexto2)">One line about it</span>
+                <textarea ref="{{ refDetalhe }}" rows="3" placeholder="e.g. I run a clothing shop and want to sell through a site" style="padding:12px 13px;background:rgba(255,255,255,.06);border:1px solid var(--faixaLinha);color:#fff;font-family:inherit;font-size:13.5px;line-height:1.5;resize:vertical"></textarea>
+              </label>
+              <button type="submit" style="margin-top:4px;padding:15px 20px;background:var(--acento2);border:0;color:var(--sobreAcento);font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer" style-hover="background:#fff">Send on WhatsApp</button>
+              <p style="margin:0;font-size:11px;line-height:1.6;letter-spacing:.04em;color:var(--faixaTexto3)">Opens the chat already filled in. Prefer email? <a href="mailto:sampaioalexandre054@gmail.com" style="color:var(--faixaTexto);border-bottom:1px solid var(--acento2)">sampaioalexandre054@gmail.com</a></p>
+            </form>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="margin-top:44px;padding-top:22px;border-top:1px solid var(--faixaLinha);display:flex;flex-wrap:wrap;gap:10px 36px;font-family:'IBM Plex Mono',monospace;font-size:13px">
+        <a href="mailto:sampaioalexandre054@gmail.com" style="display:flex;align-items:baseline;gap:10px;color:#fff" style-hover="color:var(--acento2)">
+          <span style="color:var(--faixaTexto3);letter-spacing:.12em;text-transform:uppercase;font-size:10.5px">E‑mail</span>
+          <span>sampaioalexandre054@gmail.com</span>
+        </a>
+        <a href="https://wa.me/5598984941488" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:10px;color:#fff" style-hover="color:var(--acento2)">
+          <span style="color:var(--faixaTexto3);letter-spacing:.12em;text-transform:uppercase;font-size:10.5px">WhatsApp</span>
+          <span>(98) 98494‑1488</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5598984941488" target="_blank" rel="noopener" style="position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:9px;padding:14px 18px;background:var(--acento2);color:var(--sobreAcento);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 30px -10px rgba(0,0,0,.55)" style-hover="background:#fff;color:#0C1B33">
+    <span style="width:8px;height:8px;border-radius:50%;background:var(--sobreAcento);flex:none"></span>{{ rotuloFalar }}
+  </a>
+
+  <footer style="background:var(--faixa);color:var(--faixaTexto4);border-top:1px solid var(--faixaLinha3)">
+    <div style="max-width:1120px;margin:0 auto;padding:22px 26px 96px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase">
+      <span>Alexandre Sampaio Dutra, São Luís, MA</span>
+      <a href="#topo" style="color:var(--faixaTexto4)" style-hover="color:var(--acento2)">Topo</a>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;tema&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;claro&quot;,&quot;escuro&quot;],&quot;default&quot;:&quot;claro&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;,&quot;label&quot;:&quot;Tema inicial&quot;},&quot;idioma&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Idioma&quot;,&quot;label&quot;:&quot;Idioma inicial&quot;},&quot;fotoFoco&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:22,&quot;min&quot;:0,&quot;max&quot;:100,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Foto&quot;,&quot;label&quot;:&quot;Enquadramento vertical&quot;},&quot;verProjetos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;cursosAbertos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let salvo = null, tema = null;
+    try {
+      salvo = window.localStorage.getItem('asd-idioma');
+      tema = window.localStorage.getItem('asd-tema');
+    } catch (e) {}
+    this.state = {
+      aberto: null,
+      idioma: salvo === 'en' || salvo === 'pt' ? salvo : null,
+      tema: tema === 'escuro' || tema === 'claro' ? tema : null
+    };
+    this.marcaTema = React.createRef();
+    this.navRef = React.createRef();
+    this.fotoRef = React.createRef();
+    this.btPt = React.createRef();
+    this.btEn = React.createRef();
+    this.refNome = React.createRef();
+    this.refServico = React.createRef();
+    this.refPrazo = React.createRef();
+    this.refOrcamento = React.createRef();
+    this.refDetalhe = React.createRef();
+  }
+
+  get idioma() {
+    return this.state.idioma || (this.props.idioma === 'en' ? 'en' : 'pt');
+  }
+
+  componentDidMount() {
+    this.aplica();
+    const nav = this.navRef.current;
+    if (!nav) return;
+    const pinta = (id) => {
+      nav.querySelectorAll('[data-sec]').forEach((l) => {
+        const on = l.dataset.sec === id;
+        l.style.color = on ? '#fff' : 'var(--navLink)';
+        l.style.borderBottomColor = on ? 'var(--acento2)' : 'transparent';
+      });
+    };
+    const ids = ['atuacao', 'habilidades', 'cursos', 'projetos', 'servicos', 'contato'];
+    const hero = document.getElementById('topo');
+    this.avalia = () => {
+      const alvo = window.innerHeight * 0.35;
+      if (hero && hero.getBoundingClientRect().bottom > alvo) return pinta(null);
+      let atual = null;
+      ids.forEach((id) => {
+        const s = document.getElementById(id);
+        if (!s) return;
+        const r = s.getBoundingClientRect();
+        if (r.top <= alvo && r.bottom > alvo) atual = id;
+      });
+      if (!atual && window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 2) atual = 'contato';
+      pinta(atual);
+    };
+    window.addEventListener('scroll', this.avalia, { passive: true });
+    window.addEventListener('resize', this.avalia);
+    const passos = [];
+    for (let i = 0; i <= 50; i++) passos.push(i / 50);
+    this.obs = new IntersectionObserver(this.avalia, { threshold: passos });
+    [hero].concat(ids.map((i) => document.getElementById(i))).forEach((s) => { if (s) this.obs.observe(s); });
+    this.avalia();
+  }
+
+  componentDidUpdate() { this.aplica(); }
+
+  componentWillUnmount() {
+    if (this.obs) this.obs.disconnect();
+    window.removeEventListener('scroll', this.avalia);
+    window.removeEventListener('resize', this.avalia);
+  }
+
+  get tema() {
+    return this.state.tema || (this.props.tema === 'escuro' ? 'escuro' : 'claro');
+  }
+
+  aplica() {
+    const escuro = this.tema === 'escuro';
+    try {
+      if (escuro) document.documentElement.dataset.tema = 'escuro';
+      else delete document.documentElement.dataset.tema;
+    } catch (e) {}
+    const marca = this.marcaTema.current;
+    if (marca) {
+      marca.style.background = escuro ? 'var(--acento)' : 'transparent';
+      marca.style.border = escuro ? '0' : '1px solid var(--faixaTexto3)';
+    }
+    const foto = this.fotoRef.current;
+    if (foto) foto.style.backgroundPosition = '50% ' + (this.props.fotoFoco ?? 22) + '%';
+    if (foto) foto.style.filter = 'var(--fotoFiltro)';
+    const pt = this.idioma === 'pt';
+    const par = [[this.btPt.current, pt], [this.btEn.current, !pt]];
+    par.forEach(([b, on]) => {
+      if (!b) return;
+      b.style.background = on ? 'var(--acento2)' : 'none';
+      b.style.color = on ? 'var(--sobreAcento)' : 'var(--faixaTexto3)';
+      b.style.borderColor = on ? 'var(--acento2)' : 'var(--faixaLinha)';
+      b.style.fontWeight = on ? '600' : '400';
+    });
+    try { document.documentElement.lang = pt ? 'pt-BR' : 'en'; } catch (e) {}
+  }
+
+  troca(l) {
+    return () => {
+      try { window.localStorage.setItem('asd-idioma', l); } catch (e) {}
+      this.setState({ idioma: l });
+    };
+  }
+
+  envia = (e) => {
+    e.preventDefault();
+    const v = (r) => (r.current && r.current.value ? r.current.value.trim() : '');
+    const pt = this.idioma === 'pt';
+    const nome = v(this.refNome) || (pt ? 'não informado' : 'not given');
+    const linhas = pt
+      ? ['Olá, Alexandre! Meu nome é ' + nome + '.', '', 'Preciso de: ' + v(this.refServico), 'Para quando: ' + v(this.refPrazo), 'Faixa de investimento: ' + v(this.refOrcamento)]
+      : ['Hi Alexandre! My name is ' + nome + '.', '', 'I need: ' + v(this.refServico), 'Timing: ' + v(this.refPrazo), 'Budget range: ' + v(this.refOrcamento)];
+    const detalhe = v(this.refDetalhe);
+    if (detalhe) linhas.push('', detalhe);
+    linhas.push('', pt ? '(enviado pelo site)' : '(sent from the site)');
+    const url = 'https://wa.me/5598984941488?text=' + encodeURIComponent(linhas.join('\n'));
+    window.open(url, '_blank', 'noopener');
+  };
+
+  trocaTema = () => {
+    const novo = this.tema === 'escuro' ? 'claro' : 'escuro';
+    try { window.localStorage.setItem('asd-tema', novo); } catch (e) {}
+    this.setState({ tema: novo });
+  };
+
+  alterna(k) {
+    return () => this.setState((s) => ({ aberto: s.aberto === k ? null : k }));
+  }
+
+  renderVals() {
+    const a = this.state.aberto;
+    const tudo = this.props.cursosAbertos === true;
+    const pt = this.idioma === 'pt';
+    return {
+      navRef: this.navRef,
+      fotoRef: this.fotoRef,
+      btPt: this.btPt,
+      btEn: this.btEn,
+      pt: pt,
+      en: !pt,
+      rotuloProjeto: pt ? 'Projeto' : 'Project',
+      marcaTema: this.marcaTema,
+      envia: this.envia,
+      refNome: this.refNome,
+      refServico: this.refServico,
+      refPrazo: this.refPrazo,
+      refOrcamento: this.refOrcamento,
+      refDetalhe: this.refDetalhe,
+      rotuloFalar: pt ? 'Falar comigo' : 'Message me',
+      trocaTema: this.trocaTema,
+      rotuloTema: this.tema === 'escuro' ? (pt ? 'Escuro' : 'Dark') : (pt ? 'Claro' : 'Light'),
+      paraPt: this.troca('pt'),
+      paraEn: this.troca('en'),
+      verProjetos: this.props.verProjetos !== false,
+      redes: tudo || a === 'redes', abrirRedes: this.alterna('redes'),
+      python: tudo || a === 'python', abrirPython: this.alterna('python'),
+      bi: tudo || a === 'bi', abrirBi: this.alterna('bi'),
+      sql: tudo || a === 'sql', abrirSql: this.alterna('sql'),
+      info: tudo || a === 'info', abrirInfo: this.alterna('info'),
+      ia: tudo || a === 'ia', abrirIa: this.alterna('ia'),
+      cnh: tudo || a === 'cnh', abrirCnh: this.alterna('cnh')
+    };
+  }
+}
+</script>
+</body>
+</html>
