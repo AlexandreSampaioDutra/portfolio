@@ -1,7 +1,10 @@
 # Portfólio — Alexandre Sampaio Dutra
 
+No ar: **https://alexandresampaiodutra.github.io/portfolio/**
+
 Site estático (HTML + CSS + um arquivo JS, sem build e sem framework) gerado a partir do
-projeto Claude Design **Portfólio com azulejo São Luís**.
+projeto Claude Design **Portfólio com azulejo São Luís**. Publicado pelo GitHub Pages a
+partir da branch `main`, na raiz — cada push atualiza o site em um ou dois minutos.
 
 ```
 index.html                        página pronta (gerada)
@@ -33,18 +36,20 @@ navegadores se comportam melhor via servidor.
 - **Orçamento** — o formulário não envia para servidor nenhum: monta a mensagem e abre o
   WhatsApp `wa.me/5598984941488` em outra aba.
 
-## Antes de publicar
+## Domínio próprio
 
-No `<head>` do `index.html` (e do arquivo em `design/`) existem três endereços de exemplo:
+Os três endereços de prévia social no `<head>` apontam para o GitHub Pages:
 
 ```
-og:url        https://SEU-DOMINIO.com.br/
-og:image      https://SEU-DOMINIO.com.br/assets/compartilhar.png
-twitter:image https://SEU-DOMINIO.com.br/assets/compartilhar.png
+og:url        https://alexandresampaiodutra.github.io/portfolio/
+og:image      https://alexandresampaiodutra.github.io/portfolio/assets/compartilhar.png
+twitter:image https://alexandresampaiodutra.github.io/portfolio/assets/compartilhar.png
 ```
 
-Trocar pelo domínio real — sem isso a prévia com imagem não aparece no WhatsApp, Instagram
-nem LinkedIn.
+Ao migrar para domínio próprio, trocar os três em `design/Portfolio Alexandre.dc.html`,
+rodar `node tools/build-from-design.js` e apontar o domínio nas configurações de Pages do
+repositório. Sem esses endereços corretos, a prévia com imagem não aparece no WhatsApp,
+Instagram nem LinkedIn.
 
 ## Dependências externas
 
