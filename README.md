@@ -1,14 +1,15 @@
 # Portfólio — Alexandre Sampaio Dutra
 
-No ar: **https://alexandresampaiodutra.github.io/portfolio/**
+No ar: **https://alexandredutra.dev.br**
 
 Site estático (HTML + CSS + um arquivo JS, sem build e sem framework) gerado a partir do
-projeto Claude Design **Portfólio com azulejo São Luís**. Publicado pelo GitHub Pages a
-partir da branch `main`, na raiz — cada push atualiza o site em um ou dois minutos.
+projeto Claude Design **Portfólio com azulejo São Luís**. Publicado pela Vercel a partir da
+branch `main`, na raiz — cada push atualiza o site em menos de um minuto.
 
 ```
 index.html                        página pronta (gerada)
 app.js                            tema, idioma, acordeão, menu e orçamento no WhatsApp
+assets/mobile.css                 camada de celular (escrita à mão, não vem do design)
 assets/                           foto, favicon, imagem de compartilhamento, prévia do MeuFinanceiro
 design/Portfolio Alexandre.dc.html  arquivo original do Claude Design (referência)
 design/support.js                 runtime dc original (referência, não usado pelo site)
@@ -33,23 +34,41 @@ navegadores se comportam melhor via servidor.
   (`localStorage` `asd-idioma`, e `<html lang>` acompanha).
 - **Cursos** — acordeão, um item aberto por vez, com `aria-expanded` correto.
 - **Menu** — sublinha a seção visível conforme a rolagem (`IntersectionObserver` + `scroll`).
+  No celular a faixa do menu não cabe inteira; ao trocar de seção, o `app.js` traz o item
+  ativo para a vista rolando só a faixa, na horizontal.
 - **Orçamento** — o formulário não envia para servidor nenhum: monta a mensagem e abre o
   WhatsApp `wa.me/5598984941488` em outra aba.
 
-## Domínio próprio
+## Celular
 
-Os três endereços de prévia social no `<head>` apontam para o GitHub Pages:
+`assets/mobile.css` é a única folha de estilo escrita à mão do projeto. Ela **não vem do
+Claude Design**: o `tools/build-from-design.js` a injeta no `<head>` do `index.html`, junto
+com o `viewport-fit=cover` e os `preconnect` dos CDNs de ícones. Por isso baixar um
+`.dc.html` novo por cima do design não apaga o trabalho de celular.
+
+O HTML gerado tem estilo inline em quase todo elemento e nenhuma classe, então as regras do
+`mobile.css` precisam de `!important` e encontram os elementos pelo id da seção ou por um
+trecho do próprio estilo inline (`[style*="padding:76px 26px"]`). **Se o design mudar esses
+valores, a regra correspondente para de casar em silêncio** — depois de regerar, vale abrir
+a página estreita e conferir. Cada regra tem o motivo escrito ao lado no arquivo.
+
+O ajuste que mais importa: os campos do formulário ficam com 16px em tela de toque. Abaixo
+disso o Safari dá zoom na página inteira quando o dedo toca o campo, e não desfaz depois.
+
+## Domínio
+
+O site responde em `alexandredutra.dev.br` (registrado no Registro.br, DNS apontado para a
+Vercel). Três endereços no `<head>` carregam o domínio escrito por extenso:
 
 ```
-og:url        https://alexandresampaiodutra.github.io/portfolio/
-og:image      https://alexandresampaiodutra.github.io/portfolio/assets/compartilhar.png
-twitter:image https://alexandresampaiodutra.github.io/portfolio/assets/compartilhar.png
+og:url        https://alexandredutra.dev.br/
+og:image      https://alexandredutra.dev.br/assets/compartilhar.png
+twitter:image https://alexandredutra.dev.br/assets/compartilhar.png
 ```
 
-Ao migrar para domínio próprio, trocar os três em `design/Portfolio Alexandre.dc.html`,
-rodar `node tools/build-from-design.js` e apontar o domínio nas configurações de Pages do
-repositório. Sem esses endereços corretos, a prévia com imagem não aparece no WhatsApp,
-Instagram nem LinkedIn.
+Mais o `<link rel="canonical">` e o campo `url` do JSON-LD. Ao trocar de endereço de novo,
+mudar os cinco em `design/Portfolio Alexandre.dc.html` e rodar `node tools/build-from-design.js`.
+Sem os endereços certos, a prévia com imagem não aparece no WhatsApp, Instagram nem LinkedIn.
 
 ## Dependências externas
 

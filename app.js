@@ -170,17 +170,41 @@
     window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');
   }
 
+  // Em celular a faixa do menu rola de lado e nao cabe inteira: "Projetos",
+  // "Servicos" e "Orcamento" nascem fora da tela. Ao trocar de secao, traz o
+  // item ativo para a vista. Mexe so na horizontal da faixa — scrollIntoView
+  // mexeria na rolagem vertical da pagina e tiraria o leitor do lugar.
+  function revela(link) {
+    var faixa = link.parentElement;
+    if (!faixa || faixa.scrollWidth <= faixa.clientWidth + 1) return;
+    var rl = link.getBoundingClientRect();
+    var rf = faixa.getBoundingClientRect();
+    var alvo = faixa.scrollLeft + (rl.left - rf.left) - (rf.width - rl.width) / 2;
+    alvo = Math.max(0, Math.min(alvo, faixa.scrollWidth - faixa.clientWidth));
+    // Atribuicao simples, sem scrollTo({behavior:'smooth'}): quem suaviza e o
+    // scroll-behavior do mobile.css. Assim o movimento nao depende do navegador
+    // animar rolagem por script — que e justamente o que alguns suspendem em
+    // quadro fora de vista — e ainda respeita prefers-reduced-motion, porque a
+    // regra que desliga a suavidade vive no CSS.
+    faixa.scrollLeft = alvo;
+  }
+
   // Menu: marca a secao visivel enquanto a pagina rola.
   function menu() {
     var nav = ref('navRef');
     if (!nav) return;
 
+    var ultimo;
     var marca = function (id) {
       nav.querySelectorAll('[data-sec]').forEach(function (l) {
         var on = l.dataset.sec === id;
         l.style.color = on ? '#fff' : 'var(--navLink)';
         l.style.borderBottomColor = on ? 'var(--acento2)' : 'transparent';
+        // So quando a secao muda: avalia() roda a cada evento de rolagem, e
+        // reposicionar a faixa a cada quadro brigaria com o dedo do usuario.
+        if (on && id !== ultimo) revela(l);
       });
+      ultimo = id;
     };
 
     var hero = document.getElementById('topo');

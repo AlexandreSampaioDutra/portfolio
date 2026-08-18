@@ -88,11 +88,34 @@ const preTheme = `<script>
 }catch(e){}})();
 </script>`;
 
+// --- 8. camada de celular ---------------------------------------------------
+// assets/mobile.css nao vem do Claude Design: e nosso, e por isso e injetado
+// aqui em vez de morar no .dc.html. Baixar um design novo por cima nao apaga.
+// Vem depois do <style> do design para vencer por ordem, alem do !important.
+const mobile = [
+  '<meta name="color-scheme" content="light dark">',
+  '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>',
+  '<link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin>',
+  '<link rel="stylesheet" href="assets/mobile.css">',
+].join('\n');
+
+// viewport-fit=cover libera as env(safe-area-inset-*) usadas no mobile.css;
+// sem isso o iPhone reserva a faixa do notch e o site nunca a ocupa.
+const headMobile = head.replace(
+  '<meta name="viewport" content="width=device-width, initial-scale=1">',
+  '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+);
+if (headMobile === head) {
+  console.error('Meta viewport nao encontrada no formato esperado — conferir o design.');
+  process.exit(1);
+}
+
 const html = `<!DOCTYPE html>
 <html lang="pt-BR">
-<head>${head}
+<head>${headMobile}
 ${preTheme}
 ${helmet.trim().replace('</style>', `${extraCss}\n</style>`)}
+${mobile}
 </head>
 <body>
 ${tpl.trim()}

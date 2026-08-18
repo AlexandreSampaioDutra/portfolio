@@ -1,0 +1,304 @@
+/* Camada de celular — Alexandre Sampaio Dutra
+   ---------------------------------------------------------------------------
+   O index.html é gerado a partir de design/Portfolio Alexandre.dc.html e traz
+   estilo inline em praticamente todo elemento. Estilo inline vence folha de
+   estilo, então as regras daqui precisam de !important — não é descuido.
+
+   Este arquivo NÃO vem do Claude Design: ele é injetado no <head> por
+   tools/build-from-design.js. Assim, baixar um .dc.html novo por cima do
+   design não apaga o trabalho de celular.
+
+   Como os seletores acham os elementos: não há classe nenhuma no HTML gerado,
+   então usamos o id da seção ou um trecho do próprio estilo inline
+   ([style*="padding:76px 26px"]). Se o design mudar esses valores, a regra
+   correspondente para de casar — conferir aqui depois de regerar.
+
+   Medido em 375px de largura antes de escrever. Estado anterior: página com
+   11.545px de altura, campos de formulário com fonte 13.5px (o Safari do
+   iPhone dá zoom sozinho em campo com menos de 16px), botões de idioma e tema
+   com 28px de altura, links de contato com 15-17px.
+   --------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   1. Base — vale em qualquer largura
+   ========================================================================== */
+
+html {
+  -webkit-text-size-adjust: 100%; /* iPhone deitado não infla o texto sozinho */
+  text-size-adjust: 100%;
+
+  /* Trava rolagem lateral acidental. É `clip`, não `hidden`, e no html, não no
+     body, de propósito: `overflow-x:hidden` obriga o navegador a promover o
+     outro eixo de `visible` para `auto`, o elemento vira container de rolagem
+     e leva junto o scroll-padding-top (o deslocamento que impede o título de
+     parar atrás da barra grudada) e, em alguns Safari, o próprio sticky.
+     `clip` corta o transbordo sem criar container de rolagem nenhum.
+     Safari abaixo de 16 ignora a regra — sem efeito colateral, porque a
+     página, medida, não tem transbordo horizontal real de qualquer forma. */
+  overflow-x: clip;
+}
+
+/* Quem pediu menos movimento no sistema não quer rolagem animada também. O
+   design já desliga as animações; scroll-behavior é propriedade separada e
+   não vem coberta por aquela regra. */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  header nav div[style*="overflow-x:auto"] {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Em tela de toque não existe hover: o realce de toque substitui o estado. */
+@media (hover: none) {
+  a,
+  button,
+  [data-click] {
+    -webkit-tap-highlight-color: rgba(200, 117, 42, 0.18);
+  }
+}
+
+/* ==========================================================================
+   2. Celular e tablet estreito (<= 760px)
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+  /* --- 2.1 Margem lateral -------------------------------------------------
+     Todo container central do site tem max-width:1120px. 26px de margem em
+     tela de 375px deixa pouco para o texto; 20px devolve 12px de linha. O
+     max() com env() cobre o iPhone deitado, quando o notch invade a lateral. */
+  [style*="max-width:1120px"] {
+    padding-left: max(20px, env(safe-area-inset-left)) !important;
+    padding-right: max(20px, env(safe-area-inset-right)) !important;
+  }
+
+  /* --- 2.2 Respiro vertical ----------------------------------------------
+     As seções vêm com 78-84px de respiro no topo, medida pensada para
+     monitor. No celular isso é quase um terço de tela em branco a cada
+     seção. 52px mantém a separação visual e encurta a rolagem. */
+  #atuacao,
+  #habilidades,
+  #cursos,
+  #projetos,
+  #servicos {
+    padding-top: 52px !important;
+  }
+
+  /* Faixa de contato: padding:76px 26px */
+  [style*="padding:76px 26px"] {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* Hero: padding:76px 26px 84px — precisa vir DEPOIS da regra acima, que
+     também casa com ele (mesma especificidade, ganha quem vem por último). */
+  [style*="padding:76px 26px 84px"] {
+    padding-top: 40px !important;
+    padding-bottom: 56px !important;
+  }
+
+  /* Rodapé: padding:22px 26px 96px — 96px embaixo é espaço morto; o env()
+     garante que o texto não fique sob a barra de gestos do iPhone. */
+  [style*="padding:22px 26px 96px"] {
+    padding-bottom: calc(48px + env(safe-area-inset-bottom)) !important;
+  }
+
+  /* Hero empilha texto e foto: 56px entre eles vira um buraco. */
+  #topo [style*="gap:56px"] {
+    gap: 32px !important;
+  }
+
+  /* --- 2.3 Tipografia -----------------------------------------------------
+     O h1 vem com entrelinha 0.94 — menor que a própria fonte. Em uma linha só
+     isso é efeito de título; quebrado em duas ou três linhas no celular, as
+     linhas se aproximam demais. */
+  #topo h1 {
+    line-height: 1.04 !important;
+  }
+
+  /* Texto secundário: 13.5px e 12px são confortáveis em monitor a 60cm, não
+     em celular na mão. Aumento contido, só o suficiente para ler sem mexer no
+     ritmo do layout. */
+  [style*="font-size:13.5px"] {
+    font-size: 14.5px !important;
+  }
+
+  [style*="font-size:12px"] {
+    font-size: 12.5px !important;
+  }
+
+  /* --- 2.4 Faixa de navegação --------------------------------------------
+     A barra é uma linha só: marca "A.S. Dutra", faixa das seções e os botões
+     de idioma/tema, com justify-content:space-between. Numa tela de 345px a
+     marca e os botões ficam com o tamanho natural deles e sobram 78px para a
+     faixa — seis seções rolando dentro de 78px não servem para nada.
+
+     Solução: quebrar a barra em duas linhas. Em cima marca e botões; embaixo
+     a faixa inteira, com os 313px de largura útil. Como a faixa vem antes dos
+     botões no HTML, o order recoloca ela por último — sem order ela quebraria
+     no meio e jogaria os botões para uma terceira linha.
+
+     O .dc-if em volta da faixa tem display:contents, então quem é item de
+     flex (e obedece a order) é a própria faixa, não o wrapper. */
+  header nav {
+    flex-wrap: wrap !important;
+    /* O gap:18px da barra valia só na horizontal enquanto era uma linha só.
+       Com a quebra ele vira também espaço entre as linhas e infla 18px de
+       barra grudada — que é altura roubada de toda rolagem da página. */
+    row-gap: 0 !important;
+  }
+
+  header nav > a[href="#topo"] {
+    order: 1;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+  }
+
+  header nav > div:last-child {
+    order: 2;
+  }
+
+  header nav div[style*="overflow-x:auto"] {
+    order: 3;
+    flex: 1 0 100% !important;
+    /* Alinha o item onde o dedo soltou em vez de deixá-lo cortado ao meio. */
+    scroll-snap-type: x proximity;
+    scroll-padding-left: 14px;
+    scroll-behavior: smooth;
+  }
+
+  header nav div[style*="overflow-x:auto"] > a {
+    scroll-snap-align: start;
+    /* 13px de respiro deixa o link com 43px de altura. Encurtar mais alivia a
+       barra grudada, mas o menu é o único jeito de andar por uma página de
+       11.000px — o alvo vem primeiro. */
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+  }
+
+  /* A barra ficou mais alta (87px medidos): sem isso o título da seção para
+     atrás dela quando se toca num link do menu. */
+  html {
+    scroll-padding-top: 96px !important;
+  }
+}
+
+/* ==========================================================================
+   3. Tela de toque — qualquer largura
+   --------------------------------------------------------------------------
+   Estas regras seguem o tipo de ponteiro, não a largura, de propósito. Um iPad
+   em pé tem 768px e passaria longe do bloco acima, mas o Safari do iPad dá o
+   mesmo zoom em campo com fonte menor que 16px e o dedo dele não é menor que o
+   do iPhone. Largura decide layout; dedo decide alvo.
+   ========================================================================== */
+
+@media (pointer: coarse) {
+
+  /* --- 3.1 Formulário de orçamento ---------------------------------------
+     O AJUSTE MAIS IMPORTANTE DA PÁGINA NO TOQUE: o Safari dá zoom na página
+     inteira quando o dedo toca um campo com fonte menor que 16px, e não desfaz
+     o zoom depois — o visitante fica preso numa página ampliada, rolando de
+     lado, no exato momento em que ia pedir orçamento. Os campos estavam com
+     13.5px. Com 16px o zoom simplesmente não acontece.
+
+     O [style] no seletor não é enfeite: os campos carregam font-size:13.5px
+     inline, e a regra 2.3 casa com eles por [style*="font-size:13.5px"]. Duas
+     regras com !important empatam no !important e se decidem pela
+     especificidade — [style*=…] vale mais que o seletor de tipo `input` e
+     venceria. Com `input[style]` a especificidade sobe e o 16px fica de pé. */
+  input[style],
+  select[style],
+  textarea[style] {
+    font-size: 16px !important;
+  }
+
+  /* Campo com altura de dedo e sem canto arredondado forçado pelo iOS. */
+  input,
+  select {
+    min-height: 48px !important;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+
+  textarea {
+    min-height: 120px !important;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+
+  /* O appearance:none tirou a seta do select; estas duas diagonais a devolvem,
+     na cor do texto do campo (serve nos dois temas). */
+  select {
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+                      linear-gradient(135deg, currentColor 50%, transparent 50%) !important;
+    background-position: calc(100% - 18px) calc(50% + 1px),
+                         calc(100% - 13px) calc(50% + 1px) !important;
+    background-size: 5px 5px, 5px 5px !important;
+    background-repeat: no-repeat !important;
+    padding-right: 34px !important;
+  }
+
+  /* --- 3.2 Alvos de toque -------------------------------------------------
+     44px é o mínimo que Apple e Google recomendam para o dedo acertar sem
+     erro. Medido antes: botões de idioma/tema com 28px, links de contato com
+     15-17px, botões de ação com 42px. */
+  header button {
+    min-height: 44px !important;
+  }
+
+  #contato a[style*="display:flex"] {
+    min-height: 44px !important;
+    align-items: center !important;
+  }
+
+  footer a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Botões de ação — "Pedir um orçamento", "Ver serviços", "Falar comigo" —
+     ficavam com 42px, dois pixels abaixo do mínimo, e são o alvo mais
+     importante da página. Todos compartilham padding:13px 22px inline. */
+  a[style*="padding:13px 22px"] {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* --- 3.3 Animação contínua ---------------------------------------------
+     As faixas de tecnologia rolam em looping e são largas (até 3.063px).
+     Avisar o navegador que só o transform muda evita repintura a cada quadro
+     — é o que mais pesa na bateria numa animação que nunca para. */
+  [style*="animation:desliza"] {
+    will-change: transform;
+  }
+}
+
+/* ==========================================================================
+   4. Celular estreito (<= 400px) — iPhone SE, Android de entrada
+   ========================================================================== */
+
+@media (max-width: 400px) {
+
+  [style*="max-width:1120px"] {
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+  }
+
+  /* Botões de ação ocupam a largura toda: alvo maior e alinhamento limpo. */
+  #topo a[style*="padding:13px 22px"],
+  #contato button[type="submit"] {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* O "Enviar no WhatsApp" fecha o formulário; merece altura de dedo cheia. */
+  #contato button[type="submit"] {
+    min-height: 52px !important;
+  }
+}
+
