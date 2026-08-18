@@ -13,10 +13,13 @@
    ([style*="padding:76px 26px"]). Se o design mudar esses valores, a regra
    correspondente para de casar — conferir aqui depois de regerar.
 
-   Medido em 375px de largura antes de escrever. Estado anterior: página com
-   11.545px de altura, campos de formulário com fonte 13.5px (o Safari do
-   iPhone dá zoom sozinho em campo com menos de 16px), botões de idioma e tema
-   com 28px de altura, links de contato com 15-17px.
+   Medido em 390px de largura antes de reescrever. Estado anterior: página com
+   10.591px de altura, sendo 1.225px só na seção de habilidades (as oito
+   descrições de categoria empilhadas viravam uma parede de texto no celular) e
+   3.716px em serviços. Barra grudada com 81px.
+
+   Depois: 9.484px de página (1.107px a menos), habilidades com 520px, serviços
+   com 3.451px, barra grudada com 80px.
    --------------------------------------------------------------------------- */
 
 /* ==========================================================================
@@ -38,13 +41,24 @@ html {
   overflow-x: clip;
 }
 
-/* Quem pediu menos movimento no sistema não quer rolagem animada também. O
-   design já desliga as animações; scroll-behavior é propriedade separada e
-   não vem coberta por aquela regra. */
+/* O botão flutuante do WhatsApp some quando a seção de orçamento chega à tela
+   (ver a marcação em app.js). A transição fica aqui, e não no design, porque
+   quem liga e desliga o botão é esta camada. */
+a[style*="position:fixed"] {
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+}
+
+/* Quem pediu menos movimento no sistema não quer rolagem animada nem o botão
+   deslizando. O design já desliga as animações; scroll-behavior e transition
+   são propriedades separadas e não vêm cobertas por aquela regra. */
 @media (prefers-reduced-motion: reduce) {
   html,
   header nav div[style*="overflow-x:auto"] {
     scroll-behavior: auto !important;
+  }
+
+  a[style*="position:fixed"] {
+    transition: none !important;
   }
 }
 
@@ -65,7 +79,7 @@ html {
 
   /* --- 2.1 Margem lateral -------------------------------------------------
      Todo container central do site tem max-width:1120px. 26px de margem em
-     tela de 375px deixa pouco para o texto; 20px devolve 12px de linha. O
+     tela de 390px deixa pouco para o texto; 20px devolve 12px de linha. O
      max() com env() cobre o iPhone deitado, quando o notch invade a lateral. */
   [style*="max-width:1120px"] {
     padding-left: max(20px, env(safe-area-inset-left)) !important;
@@ -94,18 +108,7 @@ html {
      também casa com ele (mesma especificidade, ganha quem vem por último). */
   [style*="padding:76px 26px 84px"] {
     padding-top: 40px !important;
-    padding-bottom: 56px !important;
-  }
-
-  /* Rodapé: padding:22px 26px 96px — 96px embaixo é espaço morto; o env()
-     garante que o texto não fique sob a barra de gestos do iPhone. */
-  [style*="padding:22px 26px 96px"] {
-    padding-bottom: calc(48px + env(safe-area-inset-bottom)) !important;
-  }
-
-  /* Hero empilha texto e foto: 56px entre eles vira um buraco. */
-  #topo [style*="gap:56px"] {
-    gap: 32px !important;
+    padding-bottom: 52px !important;
   }
 
   /* --- 2.3 Tipografia -----------------------------------------------------
@@ -129,12 +132,12 @@ html {
 
   /* --- 2.4 Faixa de navegação --------------------------------------------
      A barra é uma linha só: marca "A.S. Dutra", faixa das seções e os botões
-     de idioma/tema, com justify-content:space-between. Numa tela de 345px a
-     marca e os botões ficam com o tamanho natural deles e sobram 78px para a
-     faixa — seis seções rolando dentro de 78px não servem para nada.
+     de idioma/tema, com justify-content:space-between. Numa tela de 390px a
+     marca e os botões ficam com o tamanho natural deles e sobra pouco para a
+     faixa — seis seções rolando dentro de 80px não servem para nada.
 
      Solução: quebrar a barra em duas linhas. Em cima marca e botões; embaixo
-     a faixa inteira, com os 313px de largura útil. Como a faixa vem antes dos
+     a faixa inteira, com a largura útil toda. Como a faixa vem antes dos
      botões no HTML, o order recoloca ela por último — sem order ela quebraria
      no meio e jogaria os botões para uma terceira linha.
 
@@ -161,6 +164,9 @@ html {
   header nav div[style*="overflow-x:auto"] {
     order: 3;
     flex: 1 0 100% !important;
+    /* Linha fina separando a marca da faixa: sem ela as duas linhas da barra
+       se leem como um bloco só e o menu perde o começo. */
+    border-top: 1px solid var(--faixaLinha2);
     /* Alinha o item onde o dedo soltou em vez de deixá-lo cortado ao meio. */
     scroll-snap-type: x proximity;
     scroll-padding-left: 14px;
@@ -169,17 +175,183 @@ html {
 
   header nav div[style*="overflow-x:auto"] > a {
     scroll-snap-align: start;
-    /* 13px de respiro deixa o link com 43px de altura. Encurtar mais alivia a
+    /* 12px de respiro deixa o link com 41px de altura. Encurtar mais alivia a
        barra grudada, mas o menu é o único jeito de andar por uma página de
-       11.000px — o alvo vem primeiro. */
-    padding-top: 13px !important;
-    padding-bottom: 13px !important;
+       9.500px — o alvo vem primeiro. */
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
   }
 
-  /* A barra ficou mais alta (87px medidos): sem isso o título da seção para
-     atrás dela quando se toca num link do menu. */
+  /* A barra ficou mais alta: sem isso o título da seção para atrás dela
+     quando se toca num link do menu. */
   html {
-    scroll-padding-top: 96px !important;
+    scroll-padding-top: 92px !important;
+  }
+
+  /* --- 2.5 Hero -----------------------------------------------------------
+     Sem a foto o hero virou uma coluna só. O max-width:820px que segura a
+     medida de linha no monitor não atrapalha aqui, mas o parágrafo de entrada
+     (clamp 19-23px) ficava com a mesma entrelinha larga do desktop. */
+  #topo [style*="font-size:clamp(19px,2vw,23px)"] {
+    line-height: 1.34 !important;
+  }
+
+  /* A linha de dados (cidade, trabalho, faculdade) é uma lista, não um
+     parágrafo: no celular ela lê melhor empilhada do que enrolando. */
+  #topo [style*="gap:8px 24px"] {
+    flex-direction: column !important;
+    gap: 7px !important;
+  }
+
+  /* --- 2.6 Habilidades ----------------------------------------------------
+     No monitor a seção tem as faixas rolantes e, embaixo, oito categorias com
+     uma descrição cada. No celular aquela grade vira uma coluna: oito títulos
+     e oito parágrafos, ~700px de texto miúdo que ninguém lê e que empurra os
+     projetos para longe.
+
+     Aqui as descrições saem e sobram os nomes das categorias, em etiquetas do
+     mesmo desenho das que aparecem no resto do site. Diz a mesma coisa em uma
+     tela em vez de três.
+
+     A grade é achada pelo minmax(218px,1fr); as faixas rolantes, pela altura
+     de 44px das trilhas. */
+  #habilidades [style*="minmax(218px,1fr)"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 26px !important;
+  }
+
+  #habilidades [style*="minmax(218px,1fr)"] > div {
+    padding: 9px 12px;
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+  }
+
+  #habilidades [style*="minmax(218px,1fr)"] > div > p {
+    display: none !important;
+  }
+
+  #habilidades [style*="minmax(218px,1fr)"] h3 {
+    margin: 0 !important;
+    font-size: 11px !important;
+  }
+
+  /* Faixas rolantes mais baixas: três trilhas de 44px comem 156px de tela. */
+  #habilidades [style*="flex-direction:column;gap:12px"] {
+    margin-top: 28px !important;
+    gap: 10px !important;
+  }
+
+  #habilidades [style*="height:44px"] {
+    height: 38px !important;
+  }
+
+  #habilidades [style*="padding:11px 17px"] {
+    padding: 8px 13px !important;
+    gap: 8px !important;
+  }
+
+  /* --- 2.7 Cursos ---------------------------------------------------------
+     Cada linha do acordeão é um botão com o nome do curso à esquerda e a carga
+     horária à direita. Título grande demais no celular espreme a carga
+     horária contra a borda. */
+  #cursos button[style*="padding:19px 0"] {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    gap: 14px !important;
+  }
+
+  #cursos button[style*="padding:19px 0"] > span:first-child {
+    font-size: 17.5px !important;
+  }
+
+  /* --- 2.8 Projetos -------------------------------------------------------
+     46px de respiro dentro de cada projeto, mais a borda em cima, dá quase
+     100px entre dois projetos. */
+  #projetos article[style*="padding:46px 0"] {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  /* O cartão com o endereço do projeto ("Loja no ar / disimonni.com.br") */
+  #projetos a[style*="padding:26px 24px"] {
+    padding: 20px 18px !important;
+    gap: 14px !important;
+  }
+
+  /* A prévia do MeuFinanceiro nasce com 300px fixos; solta para ocupar a
+     largura da coluna, que é maior que isso. */
+  #projetos img[style*="width:300px"] {
+    width: 100% !important;
+  }
+
+  /* --- 2.9 Serviços -------------------------------------------------------
+     A seção mais longa da página: oito cartões, quatro passos de "Como
+     funciona" e quatro itens de "Combinado desde o começo". Sem cortar nada,
+     só apertando o que era respiro de monitor, ela encurta 265px. */
+  #servicos [style*="minmax(240px,1fr)"] {
+    margin-top: 24px !important;
+    gap: 12px !important;
+  }
+
+  #servicos article[style*="padding:26px 24px"] {
+    padding: 20px 18px !important;
+    gap: 10px !important;
+  }
+
+  #servicos [style*="minmax(180px,1fr)"] {
+    margin-top: 22px !important;
+    gap: 22px 26px !important;
+  }
+
+  #servicos [style*="minmax(224px,1fr)"] {
+    margin-top: 22px !important;
+    gap: 20px 26px !important;
+  }
+
+  #servicos h3[style*="margin:52px 0 0"] {
+    margin-top: 40px !important;
+  }
+
+  /* --- 2.10 Orçamento -----------------------------------------------------
+     Texto de apresentação e formulário deixam de ser duas colunas; 48px entre
+     eles vira um buraco no meio da seção. */
+  #contato [style*="flex-wrap:wrap;gap:48px"] {
+    gap: 32px !important;
+  }
+
+  #contato [style*="margin-top:44px;padding-top:22px"] {
+    margin-top: 30px !important;
+  }
+
+  /* --- 2.11 Rodapé e botão flutuante --------------------------------------
+     O rodapé nasce com 96px embaixo para não ficar debaixo do botão
+     flutuante. Como no celular o botão some junto com a chegada do orçamento
+     (regra abaixo), sobra só a barra de gestos do iPhone para respeitar. */
+  [style*="padding:22px 26px 96px"] {
+    padding-bottom: calc(34px + env(safe-area-inset-bottom)) !important;
+  }
+
+  a[style*="position:fixed"] {
+    right: 16px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    padding: 12px 16px !important;
+  }
+
+  /* O botão repete o "Enviar no WhatsApp" do formulário e, parado no canto,
+     cobre justamente o campo de baixo e o rodapé. Quando a seção de orçamento
+     entra na tela ele sai de cena — quem marca é o app.js.
+
+     O visibility:hidden não é redundante com o opacity:0: sem ele o botão
+     continua na ordem de tabulação e o teclado (ou o leitor de tela) para num
+     alvo que ninguém vê. Ele entra na transição para o sumiço ainda ser
+     suave — visibility troca de valor só no fim da transição. */
+  html[data-orcamento-a-vista="sim"] a[style*="position:fixed"] {
+    opacity: 0 !important;
+    transform: translateY(10px) !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }
 
@@ -269,6 +441,12 @@ html {
     justify-content: center !important;
   }
 
+  /* O acordeão de cursos é a única coisa da página que se abre com toque; a
+     linha inteira precisa ser alvo, não só o texto. */
+  #cursos button {
+    min-height: 52px !important;
+  }
+
   /* --- 3.3 Animação contínua ---------------------------------------------
      As faixas de tecnologia rolam em looping e são largas (até 3.063px).
      Avisar o navegador que só o transform muda evita repintura a cada quadro
@@ -279,17 +457,14 @@ html {
 }
 
 /* ==========================================================================
-   4. Celular estreito (<= 400px) — iPhone SE, Android de entrada
+   4. Celular (<= 520px) — a maioria dos aparelhos em pé
    ========================================================================== */
 
-@media (max-width: 400px) {
+@media (max-width: 520px) {
 
-  [style*="max-width:1120px"] {
-    padding-left: max(16px, env(safe-area-inset-left)) !important;
-    padding-right: max(16px, env(safe-area-inset-right)) !important;
-  }
-
-  /* Botões de ação ocupam a largura toda: alvo maior e alinhamento limpo. */
+  /* Os dois botões do hero somam mais que a largura da tela e quebravam em
+     duas linhas com tamanhos diferentes. Um embaixo do outro, ambos cheios:
+     alvo maior e alinhamento limpo. */
   #topo a[style*="padding:13px 22px"],
   #contato button[type="submit"] {
     width: 100% !important;
@@ -300,5 +475,34 @@ html {
   #contato button[type="submit"] {
     min-height: 52px !important;
   }
+
+  /* A linha de contato do fim da faixa (e-mail e WhatsApp) tem rótulo e valor
+     lado a lado; no estreito o e-mail não cabe junto do rótulo. */
+  #contato [style*="margin-top:44px;padding-top:22px"] {
+    gap: 14px 24px !important;
+  }
+
+  #contato [style*="margin-top:44px;padding-top:22px"] > a {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
 }
 
+/* ==========================================================================
+   5. Celular estreito (<= 400px) — iPhone SE, Android de entrada
+   ========================================================================== */
+
+@media (max-width: 400px) {
+
+  [style*="max-width:1120px"] {
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+  }
+
+  /* Nessa largura o rodapé não tem espaço para o nome e o "Topo" na mesma
+     linha sem apertar as duas pontas. */
+  [style*="padding:22px 26px 96px"] {
+    gap: 8px !important;
+  }
+}

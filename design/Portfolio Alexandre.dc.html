@@ -63,13 +63,13 @@
     --faixaLinha:rgba(143,182,232,.3);--faixaLinha2:rgba(143,182,232,.18);--faixaLinha3:rgba(143,182,232,.14);
     --faixaAzul:#8FB6E8;--navLink:rgba(220,233,248,.5);
     --veu:linear-gradient(105deg,#0C1B33 10%,rgba(12,27,51,.7) 55%,rgba(12,27,51,.25) 100%);
-    --veuFoto:linear-gradient(180deg,rgba(12,27,51,0) 60%,rgba(12,27,51,.5) 100%);
+    
     --grade:linear-gradient(to right,rgba(143,182,232,.17) 0 1px,transparent 1px),linear-gradient(to bottom,rgba(143,182,232,.17) 0 1px,transparent 1px);
     --gradeTam:66px 66px,66px 66px;
     --gradeMask:radial-gradient(125% 105% at 76% -6%,#000 0%,rgba(0,0,0,.34) 46%,transparent 80%);
     --arcos:repeating-radial-gradient(circle at 90% 112%,transparent 0 122px,rgba(143,182,232,.24) 122px 123.5px);
     --arcosMask:radial-gradient(95% 92% at 90% 112%,#000 0%,rgba(0,0,0,.5) 54%,transparent 86%);
-    --brilho:radial-gradient(58% 58% at 10% 4%,rgba(200,117,42,.11),transparent 72%);--logoMono:none;--logoClarear:none;--fotoFiltro:saturate(.96) contrast(1.03);
+    --brilho:radial-gradient(58% 58% at 10% 4%,rgba(200,117,42,.11),transparent 72%);--logoMono:none;--logoClarear:none;
   }
   [data-tema="escuro"]{
     --pagina:#0A0A0C;--faixa:#141419;--texto:#EFEFF2;--texto2:#A9A9B6;--texto3:#93939F;--texto4:#6E6E7B;
@@ -80,13 +80,13 @@
     --faixaLinha:rgba(255,255,255,.15);--faixaLinha2:rgba(255,255,255,.08);--faixaLinha3:rgba(255,255,255,.06);
     --faixaAzul:#C7F04A;--navLink:rgba(239,239,242,.45);
     --veu:linear-gradient(105deg,#0A0A0C 8%,rgba(10,10,12,.55) 58%,rgba(10,10,12,.15) 100%);
-    --veuFoto:linear-gradient(180deg,rgba(10,10,12,0) 52%,rgba(10,10,12,.72) 100%);
+    
     --grade:linear-gradient(to right,rgba(255,255,255,.075) 0 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.075) 0 1px,transparent 1px);
     --gradeTam:48px 48px,48px 48px;
     --gradeMask:radial-gradient(115% 100% at 70% -8%,#000 0%,rgba(0,0,0,.3) 48%,transparent 82%);
     --arcos:repeating-radial-gradient(circle at 92% 108%,transparent 0 100px,rgba(199,240,74,.2) 100px 101.5px);
     --arcosMask:radial-gradient(88% 86% at 92% 108%,#000 0%,rgba(0,0,0,.46) 54%,transparent 88%);
-    --brilho:radial-gradient(56% 50% at 84% 2%,rgba(199,240,74,.13),transparent 70%),radial-gradient(46% 46% at 4% 96%,rgba(126,146,255,.14),transparent 74%);--logoMono:invert(1) brightness(1.9);--logoClarear:brightness(1.75) saturate(1.15);--fotoFiltro:grayscale(.9) contrast(1.05) brightness(.97);
+    --brilho:radial-gradient(56% 50% at 84% 2%,rgba(199,240,74,.13),transparent 70%),radial-gradient(46% 46% at 4% 96%,rgba(126,146,255,.14),transparent 74%);--logoMono:invert(1) brightness(1.9);--logoClarear:brightness(1.75) saturate(1.15);
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--pagina);color:var(--texto);font-family:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;font-size:16.5px;letter-spacing:-.005em;-webkit-font-smoothing:antialiased}
@@ -96,7 +96,6 @@
   html{scroll-behavior:smooth;scroll-padding-top:64px}
   :focus-visible{outline:2px solid var(--acento);outline-offset:3px}
   @keyframes sobe{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-  @keyframes revela{from{opacity:0}to{opacity:1}}
   @keyframes desliza{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
   @media (prefers-reduced-motion:reduce){*{animation:none !important}}
 </style>
@@ -159,9 +158,9 @@
     <div style="position:absolute;inset:0;background:var(--veu)"></div>
 
 
-    <div style="position:relative;max-width:1120px;margin:0 auto;padding:76px 26px 84px;display:flex;flex-wrap:wrap;gap:56px;align-items:center">
+    <div style="position:relative;max-width:1120px;margin:0 auto;padding:76px 26px 84px">
 
-      <div style="flex:1.25 1 430px;min-width:0;animation:sobe .7s cubic-bezier(.2,.8,.2,1) both">
+      <div style="max-width:820px;animation:sobe .7s cubic-bezier(.2,.8,.2,1) both">
         <h1 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(42px,6.2vw,80px);line-height:.94;letter-spacing:-.035em;color:#fff;text-wrap:balance">Alexandre<br>Sampaio Dutra</h1>
 
         <sc-if value="{{ pt }}" hint-placeholder-val="{{ true }}">
@@ -196,13 +195,6 @@
             </div>
           </div>
         </sc-if>
-      </div>
-
-      <div style="flex:.8 1 300px;min-width:0;max-width:370px;animation:revela .9s ease .2s both">
-        <div style="position:relative;aspect-ratio:4/5;border:1px solid var(--faixaLinha)">
-          <div ref="{{ fotoRef }}" style="position:absolute;inset:0;background-image:url('assets/alexandre.jpeg');background-size:cover;background-position:50% 22%;filter:saturate(.92) contrast(1.02)"></div>
-          <div style="position:absolute;inset:0;background:var(--veuFoto)"></div>
-        </div>
       </div>
     </div>
   </section>
@@ -983,7 +975,7 @@
             <div style="margin-top:32px;display:flex;flex-direction:column;gap:14px">
               <div style="display:flex;gap:14px;align-items:baseline">
                 <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">01</span>
-                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">Você responde as quatro perguntas ao lado.</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">Você responde as quatro perguntas do formulário.</span>
               </div>
               <div style="display:flex;gap:14px;align-items:baseline">
                 <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">02</span>
@@ -1004,7 +996,7 @@
             <div style="margin-top:32px;display:flex;flex-direction:column;gap:14px">
               <div style="display:flex;gap:14px;align-items:baseline">
                 <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">01</span>
-                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">You answer the four questions on the right.</span>
+                <span style="font-size:16px;line-height:1.55;color:var(--faixaTexto2)">You answer the four questions in the form.</span>
               </div>
               <div style="display:flex;gap:14px;align-items:baseline">
                 <span style="flex:none;width:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--acento2)">02</span>
@@ -1141,7 +1133,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;tema&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;claro&quot;,&quot;escuro&quot;],&quot;default&quot;:&quot;claro&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;,&quot;label&quot;:&quot;Tema inicial&quot;},&quot;idioma&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Idioma&quot;,&quot;label&quot;:&quot;Idioma inicial&quot;},&quot;fotoFoco&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:22,&quot;min&quot;:0,&quot;max&quot;:100,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Foto&quot;,&quot;label&quot;:&quot;Enquadramento vertical&quot;},&quot;verProjetos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;cursosAbertos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;tema&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;claro&quot;,&quot;escuro&quot;],&quot;default&quot;:&quot;claro&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tema&quot;,&quot;label&quot;:&quot;Tema inicial&quot;},&quot;idioma&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pt&quot;,&quot;en&quot;],&quot;default&quot;:&quot;pt&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Idioma&quot;,&quot;label&quot;:&quot;Idioma inicial&quot;},&quot;verProjetos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;cursosAbertos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;}}">
 class Component extends DCLogic {
   constructor(props) {
     super(props);
@@ -1157,7 +1149,6 @@ class Component extends DCLogic {
     };
     this.marcaTema = React.createRef();
     this.navRef = React.createRef();
-    this.fotoRef = React.createRef();
     this.btPt = React.createRef();
     this.btEn = React.createRef();
     this.refNome = React.createRef();
@@ -1229,9 +1220,6 @@ class Component extends DCLogic {
       marca.style.background = escuro ? 'var(--acento)' : 'transparent';
       marca.style.border = escuro ? '0' : '1px solid var(--faixaTexto3)';
     }
-    const foto = this.fotoRef.current;
-    if (foto) foto.style.backgroundPosition = '50% ' + (this.props.fotoFoco ?? 22) + '%';
-    if (foto) foto.style.filter = 'var(--fotoFiltro)';
     const pt = this.idioma === 'pt';
     const par = [[this.btPt.current, pt], [this.btEn.current, !pt]];
     par.forEach(([b, on]) => {
@@ -1282,7 +1270,6 @@ class Component extends DCLogic {
     const pt = this.idioma === 'pt';
     return {
       navRef: this.navRef,
-      fotoRef: this.fotoRef,
       btPt: this.btPt,
       btEn: this.btEn,
       pt: pt,

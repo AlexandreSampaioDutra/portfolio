@@ -8,7 +8,6 @@
   var props = {
     tema: 'claro',
     idioma: 'pt',
-    fotoFoco: 22,
     verProjetos: true,
     cursosAbertos: false
   };
@@ -80,12 +79,6 @@
     if (marca) {
       marca.style.background = escuro ? 'var(--acento)' : 'transparent';
       marca.style.border = escuro ? '0' : '1px solid var(--faixaTexto3)';
-    }
-
-    var foto = ref('fotoRef');
-    if (foto) {
-      foto.style.backgroundPosition = '50% ' + props.fotoFoco + '%';
-      foto.style.filter = 'var(--fotoFiltro)';
     }
 
     var pt = idioma() === 'pt';
@@ -234,6 +227,22 @@
     avalia();
   }
 
+  // O botão flutuante do WhatsApp repete o "Enviar no WhatsApp" do formulário
+  // e, parado no canto, cobre o último campo e o rodapé. Aqui só marcamos no
+  // <html> que a seção de orçamento chegou à tela; quem tira o botão de cena
+  // é o mobile.css, e só no celular — no monitor ele não atrapalha ninguém.
+  // A margem de -40% embaixo adia a marcação: a seção só conta como visível
+  // quando subiu para os 60% de cima da tela, e não no instante em que a
+  // primeira linha dela aparece.
+  function flutuante() {
+    var alvo = document.getElementById('contato');
+    if (!alvo || typeof IntersectionObserver !== 'function') return;
+    var obs = new IntersectionObserver(function (entradas) {
+      document.documentElement.dataset.orcamentoAVista = entradas[0].isIntersecting ? 'sim' : 'nao';
+    }, { rootMargin: '0px 0px -40% 0px' });
+    obs.observe(alvo);
+  }
+
   function inicia() {
     document.addEventListener('click', function (e) {
       var alvo = e.target.closest('[data-click]');
@@ -248,6 +257,7 @@
 
     pinta();
     menu();
+    flutuante();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia);

@@ -10,7 +10,7 @@ branch `main`, na raiz — cada push atualiza o site em menos de um minuto.
 index.html                        página pronta (gerada)
 app.js                            tema, idioma, acordeão, menu e orçamento no WhatsApp
 assets/mobile.css                 camada de celular (escrita à mão, não vem do design)
-assets/                           foto, favicon, imagem de compartilhamento, prévia do MeuFinanceiro
+assets/                           favicon, imagem de compartilhamento, prévia do MeuFinanceiro
 design/Portfolio Alexandre.dc.html  arquivo original do Claude Design (referência)
 design/support.js                 runtime dc original (referência, não usado pelo site)
 tools/build-from-design.js        regenera o index.html a partir do arquivo de design
